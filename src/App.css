@@ -1,38 +1,349 @@
-.App {
+
+.chat-app-container {
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.user-list {
+  width: 250px;
+  border-right: 1px solid #ccc;
+  padding-right: 20px;
+}
+
+.user-list h2 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.user {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  /* border-bottom: 1px solid #ddd; */
+  transition: background-color 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.user:hover {
+  background-color: #f0f0f0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Active user styles */
+.user.active {
+  background-color: #e6f7ff; /* Light blue or any color to indicate active user */
+  font-weight: bold;
+}
+
+.user-border {
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+
+
+}
+
+.profile-picture {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info h4 {
+  margin: 0;
+}
+
+.user-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.unread-badge {
+  background-color: #ff3b3b;
+  color: white;
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-left: auto;
+}
+
+.chat-container {
+  flex-grow: 1;
+  padding-left: 20px;
+}
+
+/* Header container with search input, add button, and notification */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+/*find*/
+.find {
+  display: flex;
+}
+
+/* Search bar styling */
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-input {
+  padding: 8px 8px 8px 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  font-size: 1rem;
+  color: #888;
+}
+
+/* Add button styling */
+.add-btn {
+  display: flex;
+  align-items: center;
+  background-color: #0084ff;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.add-icon {
+  margin-right: 5px;
+}
+
+/* Notification container with badge */
+.notification-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.notification-icon {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.notification-badge {
+  /* position: absolute;
+  top: 1px;
+  /* right: -5px; *
+  right: 586px;
+  background-color: red;
+  color: white;
+  font-size: 0.4rem;
+  padding: 4px;
+  border-radius: 50%; */
+
+
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white; /* Optional: border to make the dot stand out */
+}
+
+
+
+/* Chat header */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.chat-user-info {
+  display: flex;
+  align-items: center;
+}
+
+.header-profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.header-user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-user-details h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.online-badge {
+  background-color: #4caf50;
+  color: white;
+  font-size: 0.4rem;
+  padding: 4px;
+  border-radius: 50%;
+  width: fit-content;
+  margin-top: 2px;
+}
+
+/* Icons on the right-hand side */
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 1.2rem;
+  color: #666;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: #000;
+}
+
+
+
+.chat-box {
+  height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.chat-message {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.chat-message.sent {
+  justify-content: flex-end;
+}
+
+.chat-message.received {
+  justify-content: flex-start;
+}
+
+.message-bubble {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 15px;
+  word-wrap: break-word;
+}
+
+.sent .message-bubble {
+  background-color: #0084ff;
+  color: white;
+  border-bottom-right-radius: 0;
+}
+
+.received .message-bubble {
+  background-color: #e5e5ea;
+  color: black;
+  border-bottom-left-radius: 0;
+}
+
+
+/* Chatbox container */
+.chatbox-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+}
+
+/* Chatbox input container */
+.chatbox-input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+/* Mic icon (left of the input) */
+.mic-icon {
+  font-size: 1.2rem;
+  color: #555;
+  margin-right: 10px;
+}
+
+/* Chat input */
+.chatbox-input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 8px;
+  border-radius: 25px;
+}
+
+/* Right-side icons (file, camera, emoji) */
+.right-icons {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 1.2rem;
+  color: #555;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: #0084ff;
+}
+
+/* Button for sending outside the input */
+.send-btn {
+  background-color: #0084ff;
   color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.send-btn:hover {
+  background-color: #006bb3;
 }
