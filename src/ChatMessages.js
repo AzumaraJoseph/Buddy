@@ -5,8 +5,7 @@ import { FaSearch, FaStar, FaPlus, FaBell, FaMicrophone, FaPaperclip, FaCamera, 
 const ChatMessages = ({ user, chatHistory }) => {
   return (
     <div className="chat-container">
-      <div className="find">
-        {/* Input field with search icon inside */}
+      {/* <div className="find">
         <div className="search-bar">
           <FaSearch className="search-icon" />
           <input
@@ -16,17 +15,15 @@ const ChatMessages = ({ user, chatHistory }) => {
           />
         </div>
 
-        {/* Add button */}
         <button className="add-btn">
           <FaPlus className="add-icon" /> Add
         </button>
 
-        {/* Notification icon with badge */}
         <div className="notification-container">
           <FaBell className="notification-icon" />
           <span className="notification-badge"></span>
         </div>
-      </div>
+      </div> */}
 
       <div className="chat-header">
         <div className="chat-user-info">

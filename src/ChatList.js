@@ -6,7 +6,6 @@ const ChatList = ({ users, onSelectUser }) => {
 
   return (
     <div className="user-list">
-      <h2>Chats</h2>
       <div className="user">
 
       <img
