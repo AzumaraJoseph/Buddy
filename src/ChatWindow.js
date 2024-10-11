@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import ChatList from "./ChatList";
 import ChatMessages from "./ChatMessages";
+import Sidebar from "./SideBar";
+import imgLogout from './assets/img/img-logout.png'; // Import the image
+import { FaSearch, FaPlus, FaBell } from "react-icons/fa"; // Using FontAwesome for icons
+
+
+
 
 const ChatApp = () => {
   // User data with profile picture, full name, last message, and unread message count
@@ -69,22 +75,62 @@ const ChatApp = () => {
   // State to track the selected user
   const [selectedUser, setSelectedUser] = useState(null);
 
+  const user = {
+    profilePicture: "/path/to/profile.jpg",
+    fullName: "Azumara Joseph",
+    img: {imgLogout}
+  };
+
   return (
     <div className="chat-app-container">
-      {/* ChatList component */}
-      <ChatList
-        users={users}
-        onSelectUser={(user) => setSelectedUser(user)} // Passing selected user to state
-      />
 
-      {/* ChatMessages component */}
-      {selectedUser && (
-        <ChatMessages
-          user={selectedUser}
-          chatHistory={chatHistory[selectedUser.id]}
-        />
-      )}
-    </div>
+        <Sidebar user={user}/>
+        <div className="main">
+            <div className="top">
+                <h4>Messages</h4>
+                <div className="find">
+                    {/* Input field with search icon inside */}
+                    <div className="search-bar">
+                        <FaSearch className="search-icon" />
+                        <input
+                        type="text"
+                        placeholder="Search..."
+                        className="search-input"
+                        />
+                    </div>
+
+                    {/* Add button */}
+                    <button className="add-btn">
+                        <FaPlus className="add-icon" /> Add
+                    </button>
+
+                    {/* Notification icon with badge */}
+                    <div className="notification-container">
+                        <FaBell className="notification-icon" />
+                        <span className="notification-badge"></span>
+                    </div>
+                </div>
+                
+            </div>
+
+            {/* ChatList component */}
+            <ChatList
+                users={users}
+                onSelectUser={(user) => setSelectedUser(user)} // Passing selected user to state
+            />
+
+            {/* ChatMessages component */}
+            {/* {selectedUser && (
+                <ChatMessages
+                user={selectedUser}
+                chatHistory={chatHistory[selectedUser.id]}
+                />
+            )} */}
+        </div>
+
+        
+            
+        </div>
   );
 };
 
