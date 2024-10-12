@@ -29,43 +29,90 @@ import {
 
 const ChatApp = () => {
   // User data with profile picture, full name, last message, and unread message count
-  const users = [
-    {
-      id: 1,
-      profilePicture: img2,
-      fullName: "Jane Smith",
-      chatMessage: "Hey! How are you?",
-      unreadMessage: 2,
-    },
-    {
-      id: 2,
-      profilePicture: img3,
-      fullName: "Amy Frost",
-      chatMessage: "What's up?",
-      unreadMessage: 0,
-    },
-    {
-      id: 3,
-      profilePicture: img4,
-      fullName: "Emily Davis",
-      chatMessage: "Can we talk later?",
-      unreadMessage: 1,
-    },
-    {
-      id: 4,
-      profilePicture: img5,
-      fullName: "Sarah Wilson",
-      chatMessage: "Meeting at 5 PM?",
-      unreadMessage: 3,
-    },
-    {
-      id: 5,
-      profilePicture: img6,
-      fullName: "John Doe",
-      chatMessage: "Thanks for your help!",
-      unreadMessage: 0,
-    },
-  ];
+//   const users = [
+//     {
+//       id: 1,
+//       profilePicture: img2,
+//       fullName: "Jane Smith",
+//       chatMessage: "Hey! How are you?",
+//       unreadMessage: 2,
+//     },
+//     {
+//       id: 2,
+//       profilePicture: img3,
+//       fullName: "Amy Frost",
+//       chatMessage: "What's up?",
+//       unreadMessage: 0,
+//     },
+//     {
+//       id: 3,
+//       profilePicture: img4,
+//       fullName: "Emily Davis",
+//       chatMessage: "Can we talk later?",
+//       unreadMessage: 1,
+//     },
+//     {
+//       id: 4,
+//       profilePicture: img5,
+//       fullName: "Sarah Wilson",
+//       chatMessage: "Meeting at 5 PM?",
+//       unreadMessage: 3,
+//     },
+//     {
+//       id: 5,
+//       profilePicture: img6,
+//       fullName: "John Doe",
+//       chatMessage: "Thanks for your help!",
+//       unreadMessage: 0,
+//     },
+//   ];
+    const users = [
+        {
+        id: 1,
+        profilePicture: img2,
+        fullName: "Jane Smith",
+        chatMessage: "Hey! How are you?",
+        unreadMessage: 0,
+        time: "10:15 AM",  // Time when the message was sent
+        delivered: true,   // Whether the message was delivered
+        },
+        {
+        id: 2,
+        profilePicture: img3,
+        fullName: "Amy Frost",
+        chatMessage: "What's up?",
+        unreadMessage: 3,
+        time: "09:45 AM",
+        delivered: false,
+        },
+        {
+        id: 3,
+        profilePicture: img4,
+        fullName: "Emily Davis",
+        chatMessage: "Can we talk later?",
+        unreadMessage: 0,
+        time: "11:00 AM",
+        delivered: true,  // Message not delivered yet
+        },
+        {
+        id: 4,
+        profilePicture: img5,
+        fullName: "Sarah Wilson",
+        chatMessage: "Meeting at 5 PM?",
+        unreadMessage: 0,
+        time: "08:30 AM",
+        delivered: true,
+        },
+        {
+        id: 5,
+        profilePicture: img6,
+        fullName: "John Doe",
+        chatMessage: "Thanks for your help!",
+        unreadMessage: 1,
+        time: "Yesterday",
+        delivered: false,
+        },
+    ];
 
   // Chat history data for each user
   const chatHistory = {
@@ -172,13 +219,13 @@ const ChatApp = () => {
                         </div>
 
                         {/* Search bar */}
-                        <div className="search-bar">
-                        <FaSearch className="search-icon" />
-                        <input type="text" placeholder="Search..." className="search-input" />
+                        <div className="search-bar  ">
+                        <FaSearch className="input-icon" />
+                        <input type="text" placeholder="Search Here..." className="search-bar--input" />
                         </div>
 
                         {/* List of users */}
-                        <div className="user-border">
+                        {/* <div className="user-border">
                         {users.map((user) => (
                             <div
                             key={user.id}
@@ -199,7 +246,52 @@ const ChatApp = () => {
                             </div>
                             </div>
                         ))}
-                        </div>
+                        </div> */}
+                        <div className="user-border">
+                            {users.map((user) => (
+                                <div
+                                key={user.id}
+                                className="user"
+                                onClick={() => setSelectedUser(user)} // Selecting user on click
+                                >
+                                <img
+                                    src={user.profilePicture}
+                                    alt={user.fullName}
+                                    className="profile-picture"
+                                />
+                                <div className="user-info">
+                                    <h4>{user.fullName}</h4>
+                                    <p>{user.chatMessage}</p>
+                                    <div className="message-status">
+                                        <span className="message-time">{user.time}</span>
+                                        {user.delivered && (
+                                            <span className="checkmark-icon">
+                                            <svg
+                                                width="12"
+                                                height="12"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                d="M9 16.2L4.8 12L3.4 13.4L9 19L21 7L19.6 5.6L9 16.2Z"
+                                                fill="currentColor"
+                                                />
+                                            </svg>
+                                            </span>
+                                        )}
+                                        {user.unreadMessage > 0 && (
+                                        <span className="unread-badge">{user.unreadMessage}</span>
+                                    )}
+                                    </div>
+                                    {/* {user.unreadMessage > 0 && (
+                                    <span className="unread-badge">{user.unreadMessage}</span>
+                                    )} */}
+                                </div>
+                                </div>
+                            ))}
+                            </div>
+
                     </div>
 
                     {/* Chat Section */}

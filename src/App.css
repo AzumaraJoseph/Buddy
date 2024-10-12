@@ -83,6 +83,11 @@
   align-items: center;
 }
 
+.sidebar-logout .user-info {
+  display: flex;
+  justify-content: center;
+}
+
 span {
   line-height: 137.1%;
   letter-spacing: 2%;
@@ -122,10 +127,16 @@ span {
 
 .user-info {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  /* flex-direction: column; */
   margin: 0;
   font-size: 0.9rem;
   color: #555;
+
+  color: #3B3B45;
+  margin: 0;
+  width: 210px;
+  height: 41px;
 }
 
 .user-info h4 {
@@ -149,15 +160,8 @@ span {
   line-height: normal;
   letter-spacing: 0px;
   width: 102.14px;
+  color: #959595;
 
-
-}
-
-.user-info {
-  color: #3B3B45;
-  margin: 0;
-  width: 170px;
-  height: 41px;
 }
 
 .influencer-text {
@@ -226,7 +230,7 @@ span {
 .user {
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 6px;
   cursor: pointer;
   /* border-bottom: 1px solid #ddd; */
   transition: background-color 0.3s ease;
@@ -270,6 +274,53 @@ span {
   border-radius: 20px;
   margin-left: auto;
 }
+
+.message-status .unread-badge {
+  width: 12px;
+  height: 12px;
+  background-color: #FF8600;
+  color: white;
+  padding: 0;
+  text-align: center;
+  font-size: 10px;
+}
+
+.message-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 12px;
+  color: gray;
+}
+
+.message-time {
+  margin-right: 0px;
+  font-size: 9px;
+  color: #8D8D8D;
+}
+
+.checkmark-icon {
+  display: flex;
+  align-items: center;
+  background-color: #DCE8FF;
+  color: #FF8600;
+}
+
+.search-bar--input {
+  padding: 8px 8px 8px 30px;
+  border: none;
+  border-radius: 5px;
+  /* width: 116px; */
+  margin-left: 10px;
+  /* height: 28px; */
+  border-radius: 16px;
+  font-size: 15px;
+  color: #CDCDCD;
+  letter-spacing: 0;
+  width: 243px;
+  height: 20px;
+}
+
 
 .chat-container {
   flex-grow: 1;
@@ -335,6 +386,14 @@ span {
 }
 
 .search-icon {
+  position: absolute;
+  left: 16px;
+  top: 12px;
+  font-size: 1rem;
+  color: #888;
+}
+
+.input-icon {
   position: absolute;
   left: 16px;
   top: 12px;
