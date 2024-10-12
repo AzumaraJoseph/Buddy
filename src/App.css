@@ -931,6 +931,26 @@
   margin-left: 10px;
 }
 
+.register {
+  width: 329px;
+  height: 59px;
+}
+
+.register h2 {
+  margin: 0;
+}
+
+.register p {
+  font-family: mullish;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: -0.45px;
+  color: #5B6871;
+  margin: 0;
+  padding: 10px 0;
+}
+
 .input-group {
   margin-bottom: 15px;
 }
@@ -1071,3 +1091,74 @@
   font-size: 12px; /* Adjust font size if needed */
   padding: 4px;
 }
+
+
+.form-container {
+  max-width: 389px;
+  height: 200px;
+  /* margin: 0 auto; */
+  /* padding: 20px; */
+  /* border: 1px solid #ccc; */
+  border-radius: 10px;
+  /* box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); */
+  /* background-color: #f9f9f9; */
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+/* .form-row .icon {
+  position: absolute;
+  left: 40px;
+
+} */
+
+.form-group {
+  position: relative;
+  /* width: 185px; */
+  height: 40px;
+  /* flex: 1; */
+  margin-bottom: 10px;
+}
+
+.form-group input {
+  width: 100%;
+  /* padding: 10px; */
+  padding: 10px 15px 10px 40px; /* Add padding-left to give space for the icon */
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.form-group .icon {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.register-container {
+  height: 572px;
+}
+
