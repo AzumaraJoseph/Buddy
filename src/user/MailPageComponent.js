@@ -68,7 +68,7 @@ const MailPageComponent = () => {
                 <p>We’ve sent an email to seyi@zojatech.com with a an OTP to confirm your account. Check your inbox to  activate your account.</p>
             </div>
 
-            <button className="mail-button">Confrim email</button>
+            <button className="mail-button">Confirm email</button>
             <p className="mail-login">Didn't get the mail? <span>Resend</span></p>
         </div>
 

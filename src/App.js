@@ -1,5 +1,7 @@
 import './App.css';
 import ChatWindow from './ChatWindow'
+import LoginComponent from './user/LoginComponent';
+import LoginPage from './user/LoginPage';
 import MailPage from './user/MailPage';
 import MailVerifyPage from './user/MailVerifyPage';
 import OtpPage from './user/OtpPage';
@@ -14,7 +16,8 @@ function App() {
         {/* <RegisterPage /> */}
         {/* <MailPage /> */}
         {/* <MailVerifyPage /> */}
-        <OtpPage />
+        {/* <OtpPage /> */}
+        <LoginPage />
       {/* <ChatWindow /> */}
       
       </div>
