@@ -64,15 +64,15 @@ const RegisterComponent = () => {
                         <form onSubmit={handleEmailSignup}>
                             <div className="form-row">
                                 <div className="form-group">
-                                <span className="icon">
-                                <FaUser />
-                                </span>
-                                <input
-                                type="text"
-                                id="firstName"
-                                name="firstName"
-                                placeholder="First Name"
-                                />
+                                    <span className="icon">
+                                    <FaUser />
+                                    </span>
+                                    <input
+                                    type="text"
+                                    id="firstName"
+                                    name="firstName"
+                                    placeholder="First Name"
+                                    />
                                 </div>
                                 <div className="form-group">
                                     <span className="icon">
@@ -112,7 +112,7 @@ const RegisterComponent = () => {
                             />
                             </div>
 
-                            <button type="submit">Submit</button>
+                            <button type="submit">Create account</button>
                         </form>
                     </div>
 
