@@ -1,5 +1,6 @@
 import './App.css';
 import ChatWindow from './ChatWindow'
+import MailPage from './user/MailPage';
 import RegisterPage from './user/RegisterPage';
 import SignupPage from './user/SignUpPage';
 
@@ -8,7 +9,8 @@ function App() {
     <div className="App">
       <div className='main'>
         {/* <SignupPage /> */}
-        <RegisterPage />
+        {/* <RegisterPage /> */}
+        <MailPage />
       {/* <ChatWindow /> */}
       
       </div>
