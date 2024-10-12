@@ -118,10 +118,10 @@ span {
   /* position: absolute;
   top: 866px;
   left: 95px; */
-  width: 60px;
-  height: 60px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin-right: 10px;
 
 }
 
@@ -230,7 +230,7 @@ span {
 .user {
   display: flex;
   align-items: center;
-  padding: 6px;
+  padding: 10px;
   cursor: pointer;
   /* border-bottom: 1px solid #ddd; */
   transition: background-color 0.3s ease;
@@ -257,12 +257,12 @@ span {
 
 }
 
-.profile-picture {
+/* .profile-picture {
   border-radius: 50%;
   margin-right: 10px;
   width: 50px;
   height: 50px;
-}
+} */
 
 
 
@@ -325,11 +325,12 @@ span {
 .chat-container {
   flex-grow: 1;
   padding-left: 20px;
-
+  background-color: #F5F5F5;
   position: absolute;
   top: 32px;
   left: 328px;
-  /* width: 250px; */
+  width: 600px;
+  height: 876px;
   border-right: 1px solid #ccc;
   /* padding-right: 20px; */
   /* top: 104px; */
@@ -476,6 +477,9 @@ span {
   align-items: center;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
+  /* position: absolute;
+  top: 39px;
+  left: 40px; */
 }
 
 .chat-user-info {
@@ -495,9 +499,25 @@ span {
   flex-direction: column;
 }
 
+.header-user-details .online-badge {
+  width: 3px;
+  height: 3px;
+  padding: 4px;
+  position: absolute;
+  left: 22px;
+  top: 28px;
+  margin: 0;
+  color: #33EC23;
+}
+
 .header-user-details h4 {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 14px;
+  left: 67px;
 }
 
 .online-badge {
@@ -514,6 +534,13 @@ span {
 .header-icons {
   display: flex;
   align-items: center;
+  position: absolute;
+  top: 13px;
+  left: 526px;
+}
+
+.header-icons svg {
+  margin-right: 10px;
 }
 
 .icon {
