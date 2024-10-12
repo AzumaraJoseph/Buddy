@@ -1261,12 +1261,20 @@ button:hover {
 
 .mail-text-verify {
   top: 90px;
+  /* align-items: flex-start; */
+  text-align: start;
 }
 
 .otp-container {
   display: flex;
   gap: 10px;
   justify-content: center;
+}
+
+.otp-content {
+  height: 463px;
+  top: 200px;
+  align-items: flex-start;
 }
 
 .otp-input {
@@ -1278,6 +1286,21 @@ button:hover {
   border-radius: 10px;
   outline: none;
   transition: border-color 0.3s ease;
+}
+
+.otp-group {
+  position: absolute;
+  left: 102px;
+}
+
+.otp-button {
+  /* position: absolute; */
+  top: 80px;
+}
+
+.otp-login {
+  /* position: absolute; */
+  top: 140px;
 }
 
 .otp-input:focus {

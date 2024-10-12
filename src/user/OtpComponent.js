@@ -32,31 +32,35 @@ const OtpComponent = () => {
 
   return (
     <div className="signup-container">
-        <div className="signUp-content mail-content">
+        <div className="signUp-content otp-content">
 
             <div className="mail-text mail-text-verify">
                 <h2>Verify your email</h2>
                 <p>A four digit OTP code has been sent to your email <span>seyi@zojatech.com</span></p>
             </div>
 
-            <div className="otp-container">
-                {otp.map((data, index) => (
-                    <input
-                    key={index}
-                    type="text"
-                    maxLength="1"
-                    value={data}
-                    onChange={(e) => handleChange(e.target, index)}
-                    onKeyDown={(e) => handleKeyDown(e, index)}
-                    className="otp-input"
-                    />
-                ))}
-            </div>
-            {/* <div className="group-item"> */}
-                <button className="mail-button">Confrim code</button>
-                <p className="mail-login">Didn't get the mail? <span>Resend</span></p>
+            <div className="otp-group">
+                <div className="otp-container">
+                    {otp.map((data, index) => (
+                        <input
+                        key={index}
+                        type="text"
+                        maxLength="1"
+                        value={data}
+                        onChange={(e) => handleChange(e.target, index)}
+                        onKeyDown={(e) => handleKeyDown(e, index)}
+                        className="otp-input"
+                        />
+                    ))}
+                </div>
+                {/* <div className="group-item"> */}
+                    <button className="mail-button otp-button">Confirm code</button>
+                    <p className="mail-login otp-login">Didn't get the mail? <span>Resend</span></p>
 
-            {/* </div> */}
+                {/* </div> */}
+            </div>
+ 
+                
         </div>
 
     </div>
