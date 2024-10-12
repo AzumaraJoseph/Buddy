@@ -1239,3 +1239,47 @@ button:hover {
 .mail-login span {
   color: #FF8600;
 }
+
+.verify-content {
+  height: 385px;
+}
+.mail-verify {
+  position: absolute;
+  top: 73px;
+}
+
+.verify-text {
+  position: absolute;
+  top: 166px;
+  width: 322px;
+}
+
+.verify-button {
+  position: absolute;
+  top: 290px;
+}
+
+.mail-text-verify {
+  top: 90px;
+}
+
+.otp-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.otp-input {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.otp-input:focus {
+  border: 1px solid #FF8600; /* Gold border on focus */
+}
