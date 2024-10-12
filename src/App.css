@@ -1157,7 +1157,16 @@ form {
 .form-group .icon {
   position: absolute;
   left: 0px;
-  top: 40px;
+  top: 20px;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 16px;
+}
+
+.form-group-login .icon {
+  position: absolute;
+  left: 0px;
+  top: 41px;
   transform: translateY(-50%);
   color: #888;
   font-size: 16px;
@@ -1172,7 +1181,10 @@ form {
   color: #888;
   font-size: 16px;
 }
-
+label {
+  color: #5B6871;
+  ;
+}
 .input-counter {
   font-size: 12px;
   color: #666;

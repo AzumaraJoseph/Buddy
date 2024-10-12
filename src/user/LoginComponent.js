@@ -81,7 +81,7 @@ const LoginComponent = () => {
                                 <span className="icon toggle-icon" onClick={togglePasswordVisibility}>
                                 <FaEyeSlash /> 
                                 </span>
-                                <div className="input-counter">{`${email.length}/60`}</div>
+                                <div className="input-counter">{`${email.length} / 60`}</div>
                             </div>
                             
 
@@ -102,7 +102,7 @@ const LoginComponent = () => {
                                 <span className="icon toggle-icon" onClick={togglePasswordVisibility}>
                                     {showPassword ? <FaEyeSlash /> : <FaEye />}
                                 </span>
-                                <div className="input-counter">{`${password.length}/15`}</div>
+                                <div className="input-counter">{`${password.length} / 15`}</div>
                             </div>
 
                             <button type="submit">Login</button>
