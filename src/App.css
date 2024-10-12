@@ -846,6 +846,7 @@
   letter-spacing: -0.65px;
   line-height: 24px;
   margin-left: 2px;
+  cursor: pointer;
 }
 
 .signUp-content-payload {
@@ -1277,6 +1278,7 @@ button:hover {
 
 .mail-login span {
   color: #FF8600;
+  /* cursor: pointer; */
 }
 
 .verify-content {
