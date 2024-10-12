@@ -78,6 +78,9 @@ const LoginComponent = () => {
                                     onChange={handleEmailChange}
                                     maxLength="60"
                                 />
+                                <span className="icon toggle-icon" onClick={togglePasswordVisibility}>
+                                <FaEyeSlash /> 
+                                </span>
                                 <div className="input-counter">{`${email.length}/60`}</div>
                             </div>
                             

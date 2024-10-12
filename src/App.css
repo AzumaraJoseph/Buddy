@@ -1163,15 +1163,15 @@ form {
   font-size: 16px;
 }
 
-/* .form-group .toggle-icon {
+.form-group .toggle-icon {
   position: absolute;
-  right: 10px;
-  top: 50%;
+  left: 340px;
+  top: 42px;
   transform: translateY(-50%);
   cursor: pointer;
   color: #888;
   font-size: 16px;
-} */
+}
 
 .input-counter {
   font-size: 12px;
