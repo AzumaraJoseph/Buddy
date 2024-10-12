@@ -1146,7 +1146,7 @@
 
 .form-group .icon {
   position: absolute;
-  left: 5px;
+  left: 0px;
   top: 50%;
   transform: translateY(-50%);
   color: #888;

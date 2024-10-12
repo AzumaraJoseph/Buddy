@@ -96,7 +96,7 @@ const RegisterComponent = () => {
                                 type="email"
                                 id="email"
                                 name="email"
-                                placeholder="Email"
+                                placeholder="Work email"
                             />
                             </div>
 
