@@ -59,6 +59,29 @@
   align-items: center;
 }
 
+.sidebar-item-style span {
+  line-height: 137.1%;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-family: lexend;
+  margin-left: 8px;
+  font-weight: 500;
+  /* position: absolute;
+  top: 16px;
+  left: 58px; */
+}
+
+/* span {
+  line-height: 137.1%;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-family: lexend;
+  margin-left: 8px;
+  font-weight: 500;
+  /* position: absolute;
+  top: 16px;
+} */
+
 .sidebar-item:hover {
   background-color: #3a3f47;
   border-radius: 5px;
@@ -88,16 +111,7 @@
   justify-content: center;
 }
 
-span {
-  line-height: 137.1%;
-  letter-spacing: 2%;
-  font-size: 14px;
-  font-style: lexend;
-  margin-left: 8px;
-  /* position: absolute;
-  top: 16px;
-  left: 58px; */
-}
+
 
 /* svg {
   position: absolute;
@@ -106,12 +120,12 @@ span {
 } */
 
 .logo {
-  position: absolute;
+  
 }
 .logo {
   position: absolute;
-    top: 28px;
-    left: 65px;
+  top: 28px;
+  left: 65px;
 }
 
 .profile-picture {
@@ -132,7 +146,7 @@ span {
   margin: 0;
   font-size: 0.9rem;
   color: #555;
-
+  font-family: inter;
   color: #3B3B45;
   margin: 0;
   width: 210px;
@@ -499,6 +513,7 @@ span {
 .header-user-details {
   display: flex;
   flex-direction: column;
+  font-family: inter;
 }
 
 .header-user-details .online-badge {
@@ -587,6 +602,7 @@ span {
   padding: 10px;
   border-radius: 15px;
   word-wrap: break-word;
+  font-family: inter;
 }
 
 .message-bubble p {
@@ -763,6 +779,8 @@ span {
   display: flex;
   justify-content: space-between;
   padding: 20px;
+    background-color: #f9f9f9;
+
 }
 
 .signup-section, .description-section {
@@ -809,13 +827,79 @@ span {
   margin: 20px 0;
 }
 
+.description {
+  width: 462px;
+  height: 48px;
+  display: flex;
+}
+
 .description-container {
+  position: relative;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
+  background-color: #FFFFFF;
+  height: 1024px;
+  width: 650px;
+}
+.description-text {
+  width: 422px;
+  height: 48px;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -1.1px;
+  font-family: mullish;
+  color: #5B6871;
+}
+
+.description-container .logo {
+  position: absolute;
+  top: 89px;
+  left: 114px;
+  width: 120px;
+  height: 36px;
+}
+
+.description-content {
+  width: 488px;
+  height: 351px;
+  position: absolute;
+  top: 252px;
+  left: 113px;
+
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.description-content small {
+  width: 206px;
+  height: 19px;
+  font-family: mullish;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: -0.45px;
+  /* text-align: right; */
+  color: #84919A;
 }
 
 .description-container h2 {
   margin-bottom: 15px;
+}
+
+.description .unread-badge {
+  background-color: #FF8600;
+  
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  /* background-color: #f00; Set a background color */
+  color: #fff; /* Set text/icon color */
+  border-radius: 50%; /* Make it round */
+  font-size: 12px; /* Adjust font size if needed */
+  padding: 4px;
 }
