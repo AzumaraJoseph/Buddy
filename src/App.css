@@ -477,6 +477,8 @@ span {
   align-items: center;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
+  /* border-bottom: 1px solid #ddd; */
+
   /* position: absolute;
   top: 39px;
   left: 40px; */
@@ -560,9 +562,10 @@ span {
   height: 400px;
   overflow-y: auto;
   padding: 10px;
-  border: 1px solid #ddd;
+  margin-top: 20px;
+  /* border: 1px solid #ddd; */
   border-radius: 5px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
 }
 
 .chat-message {
@@ -579,15 +582,29 @@ span {
 }
 
 .message-bubble {
-  max-width: 70%;
+  /* max-width: 70%; */
+  width: fit-content;
   padding: 10px;
   border-radius: 15px;
   word-wrap: break-word;
 }
 
+.message-bubble p {
+  margin: 0;
+}
+
+.chat-image {
+  width: 25px;
+  height: 25px;
+  margin-top: 5px;
+  margin-right: 6px;
+  border-radius: 8px;
+  align-self: flex-end;
+}
+
 .sent .message-bubble {
-  background-color: #0084ff;
-  color: white;
+  background-color: #e5e5ea;
+  color: #FF8600;
   border-bottom-right-radius: 0;
 }
 
@@ -610,25 +627,28 @@ span {
 }
 
 /* Chatbox input container */
-.chatbox-input-container {
+/* .chatbox-input-container {
   display: flex;
   align-items: center;
-  width: 100%;
-  background-color: white;
+  width: 526px;
+  height: 76px;
+  background-color: #CDCDCD;
   border: 1px solid #ccc;
-  border-radius: 25px;
+  border-radius: 12px;
   padding: 5px 10px;
   margin-bottom: 10px;
+  /* box-shadow: 0 -2 15 0 000000; *
+  box-shadow: 0 -2px 15px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* Mic icon (left of the input) */
+/* Mic icon (left of the input) *
 .mic-icon {
   font-size: 1.2rem;
   color: #555;
   margin-right: 10px;
 }
 
-/* Chat input */
+/* Chat input *
 .chatbox-input {
   flex-grow: 1;
   border: none;
@@ -636,9 +656,10 @@ span {
   font-size: 1rem;
   padding: 8px;
   border-radius: 25px;
+  width: 600px;
 }
 
-/* Right-side icons (file, camera, emoji) */
+/* Right-side icons (file, camera, emoji) *
 .right-icons {
   display: flex;
   align-items: center;
@@ -653,15 +674,80 @@ span {
 
 .icon:hover {
   color: #0084ff;
+} */
+
+
+.chatbox-input-container {
+  position: relative;
+  width: 100%;
+  margin: 10px auto;
+
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 530px;
+  height: 76px;
+  background-color: #CDCDCD;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 5px 10px;
+  /* margin-bottom: 10px; */
+  box-shadow: 0 -2 15 0 000000; 
+  box-shadow: 0 -2px 15px 0 rgba(0, 0, 0, 0.1);
 }
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.chatbox-input {
+  width: 370px;
+  height: 30px;
+  padding: 10px 50px; /* Adjust padding to make room for icons */
+  padding-left: 35px; /* Left padding for microphone icon */
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-left: 10px;
+}
+
+
+.icon {
+  position: absolute;
+  cursor: pointer;
+  font-size: 18px;
+  color: #888;
+}
+
+/* Positioning icons inside the input */
+.mic-icon {
+  left: 10px; /* Left icon (Microphone) */
+}
+
+.paperclip-icon {
+  right: 90px; /* Right icon (Paperclip) */
+}
+
+.camera-icon {
+  right: 60px; /* Right icon (Camera) */
+}
+
+.smile-icon {
+  right: 30px; /* Right icon (Smile) */
+}
+
 
 /* Button for sending outside the input */
 .send-btn {
-  background-color: #0084ff;
+  background-color: #CDCDCD;
   color: white;
   border: none;
   border-radius: 25px;
-  padding: 10px 20px;
+  padding: 10px;
   font-size: 1rem;
   cursor: pointer;
   outline: none;
@@ -670,4 +756,66 @@ span {
 
 .send-btn:hover {
   background-color: #006bb3;
+}
+
+
+.signup-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.signup-section, .description-section {
+  width: 45%;
+}
+
+.signup-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.signup-btn, .google-btn {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db4437;
+}
+
+.google-icon {
+  margin-right: 10px;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.description-container {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.description-container h2 {
+  margin-bottom: 15px;
 }
