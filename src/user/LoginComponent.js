@@ -14,6 +14,7 @@ const LoginComponent = () => {
       setPassword(e.target.value.slice(0, 15)); // Limit to 15 characters
     };
   
+    
     const togglePasswordVisibility = () => {
       setShowPassword(!showPassword);
     };

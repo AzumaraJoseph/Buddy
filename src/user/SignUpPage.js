@@ -3,6 +3,7 @@ import SignupComponent from "./SignUpComponent";
 import DescriptionComponent from "./DescriptionComponent";
 
 const SignupPage = () => {
+
   return (
     <div className="signup-page">
       

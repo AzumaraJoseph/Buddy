@@ -1,5 +1,7 @@
 import React from "react";
 import { FaGoogle } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
+
 
 const SignupComponent = () => {
   const handleEmailSignup = (event) => {
@@ -13,6 +15,14 @@ const SignupComponent = () => {
     console.log("Signed up with Google");
   };
 
+  const navigate = useNavigate();
+
+  const handleNavigateToRegister = () => {
+    navigate('/register'); // Navigate to the Register page
+  };
+
+  
+
   return (
     <div className="signup-container">
         <div className="signUp-content">
@@ -23,7 +33,7 @@ const SignupComponent = () => {
                     <h2>Register your account</h2>
                     <div className="signUp-option">
                         <div className="btn-content">
-                            <button type="submit" className="signup-btn">
+                            <button onClick={handleNavigateToRegister} type="submit" className="signup-btn">
                             <svg className="google-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M6.8 5.25C4.83939 5.25 3.25 6.83939 3.25 8.8V15.2C3.25 17.1606 4.83939 18.75 6.8 18.75H17.2C19.1606 18.75 20.75 17.1606 20.75 15.2V8.8C20.75 6.83939 19.1606 5.25 17.2 5.25H6.8ZM8.45 9.4C8.11863 9.15147 7.64853 9.21863 7.4 9.55C7.15147 9.88137 7.21863 10.3515 7.55 10.6L10.95 13.15C11.5722 13.6167 12.4278 13.6167 13.05 13.15L16.45 10.6C16.7814 10.3515 16.8485 9.88137 16.6 9.55C16.3515 9.21863 15.8814 9.15147 15.55 9.4L12.15 11.95C12.0611 12.0167 11.9389 12.0167 11.85 11.95L8.45 9.4Z" fill="#1D1D18"/>
                             </svg>
