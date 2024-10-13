@@ -95,14 +95,6 @@ const AppRoutes = () => {
         }
       />
       <Route
-        path="/verify-mail"
-        element={
-          <PublicRoute>
-            <VerifyMail />
-          </PublicRoute>
-        }
-      />
-      <Route
         path="/otp"
         element={
           <PublicRoute>
@@ -110,6 +102,15 @@ const AppRoutes = () => {
           </PublicRoute>
         }
       />
+      <Route
+        path="/verify-mail"
+        element={
+          <PublicRoute>
+            <VerifyMail />
+          </PublicRoute>
+        }
+      />
+      
       <Route
         path="/login"
         element={

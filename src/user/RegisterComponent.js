@@ -1,18 +1,66 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const RegisterComponent = () => {
-  const handleEmailSignup = (event) => {
-    event.preventDefault();
-    // Handle email signup logic here
-    console.log("Signed up with email");
-  };
 
-  const handleGoogleSignup = () => {
-    // Handle Google signup logic here
-    console.log("Signed up with Google");
-  };
+    const navigate = useNavigate(); // Initialize useNavigate
+    // const [otp, setOtp] = useState("");
+
+
+    const [formData, setFormData] = useState({
+        first_name: "",
+        last_name: "",
+        email: "",
+        password: "",
+    });
+    
+    const handleChange = (e) => {
+        setFormData({
+        ...formData,
+        [e.target.name]: e.target.value,
+        });
+    };
+    
+    const handleRegister = async (e) => {
+        e.preventDefault();
+        try {
+        const response = await fetch("https://fe-test.revvex.io/api/admin/register", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json", // Indicate that you're sending JSON data
+            },
+            body: JSON.stringify(formData), // Convert formData to JSON string
+        });
+    
+        // Check if the response is OK (status code 200-299)
+        if (!response.ok) {
+            const errorData = await response.json(); // Parse the error response
+            throw new Error(`HTTP error! status: ${response.status}, message: ${errorData.message}`);
+        }
+    
+        const data = await response.json(); // Parse the JSON response
+    
+        // Store token in local storage
+        const token = data.data.token; // Access token from response data
+        localStorage.setItem("token", token);
+    
+        // Log OTP
+        const otp = data.data.opt; // Ensure correct property name
+        // setOtp(otp);
+        console.log("OTP:", otp);
+
+        // Redirect to MailPage component upon successful registration
+        navigate("/mail"); // Navigate to MailPage
+    
+        } catch (error) {
+        console.error("Registration error:", error.message); // Log the error message
+        }
+    };
+    
+
+
 
   return (
     <div className="signup-container">
@@ -25,43 +73,8 @@ const RegisterComponent = () => {
                         <p>Proceed to create account and setup your organization</p>
                     </div>
 
-                    {/* <div class="form-container">
-                        <form>
-                            <div class="form-row">
-                            <div class="form-group">
-                                <span class="icon">
-                                <i class="fas fa-user"></i>
-                                </span>
-                                <input type="text" id="firstName" name="firstName" placeholder="First Name" />
-                            </div>
-                            <div class="form-group">
-                                <span class="icon">
-                                <i class="fas fa-user"></i>
-                                </span>
-                                <input type="text" id="lastName" name="lastName" placeholder="Last Name" />
-                            </div>
-                            </div>
-                            
-                            <div class="form-group">
-                            <span class="icon">
-                                <i class="fas fa-envelope"></i>
-                            </span>
-                            <input type="email" id="email" name="email" placeholder="Email" />
-                            </div>
-                            
-                            <div class="form-group">
-                            <span class="icon">
-                                <i class="fas fa-lock"></i>
-                            </span>
-                            <input type="password" id="password" name="password" placeholder="Password" />
-                            </div>
-                            
-                            <button type="submit">Submit</button>
-                        </form>
-                    </div> */}
-
                     <div className="form-container">
-                        <form onSubmit={handleEmailSignup}>
+                        <form onSubmit={handleRegister}>
                             <div className="form-row">
                                 <div className="form-group">
                                     <span className="icon">
@@ -70,8 +83,10 @@ const RegisterComponent = () => {
                                     <input
                                     type="text"
                                     id="firstName"
-                                    name="firstName"
+                                    name="first_name"
                                     placeholder="First Name"
+                                    value={formData.first_name}
+                                    onChange={handleChange}
                                     />
                                 </div>
                                 <div className="form-group">
@@ -81,8 +96,10 @@ const RegisterComponent = () => {
                                     <input
                                     type="text"
                                     id="lastName"
-                                    name="lastName"
+                                    name="last_name"
                                     placeholder="Last Name"
+                                    value={formData.last_name}
+                                    onChange={handleChange}
                                     />
                                 </div>
                             </div>
@@ -97,6 +114,8 @@ const RegisterComponent = () => {
                                 id="email"
                                 name="email"
                                 placeholder="Work email"
+                                value={formData.email}
+                                onChange={handleChange}
                             />
                             </div>
 
@@ -109,6 +128,8 @@ const RegisterComponent = () => {
                                 id="password"
                                 name="password"
                                 placeholder="Password"
+                                value={formData.password}
+                                onChange={handleChange}
                             />
                             </div>
 

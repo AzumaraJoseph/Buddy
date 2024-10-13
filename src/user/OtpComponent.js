@@ -30,6 +30,74 @@ const OtpComponent = () => {
       }
     };
 
+
+    // const handleVerifyOtp = async () => {
+    //     const token = localStorage.getItem("token");
+    
+    //     if (!otpInput) {
+    //       alert("Please enter the OTP.");
+    //       return;
+    //     }
+    
+    //     try {
+    //       const response = await axios.post(
+    //         "https://fe-test.revvex.io/api/admin/verify-otp",
+    //         {
+    //           otp: otpInput,
+    //         },
+    //         {
+    //           headers: {
+    //             Authorization: Bearer ${token}, // Use the stored token for authorization
+    //           },
+    //         }
+    //       );
+    
+    //       if (response.data.success) {
+    //         setOtpVerified(true);
+    //         console.log("OTP verified successfully:", response.data.message);
+    //       } else {
+    //         console.error("OTP verification failed", response.data);
+    //       }
+    //     } catch (error) {
+    //       console.error("OTP verification error:", error.response.data);
+    //     }
+    // };
+
+
+
+    const handleVerifyOtp = async () => {
+        const token = localStorage.getItem('token');
+    
+        if (!otpInput) {
+            alert("Please enter the OTP.");
+            return;
+        }
+    
+        try {
+            const response = await fetch('https://fe-test.revvex.io/api/admin/verify-otp', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${token}` // Use the stored token for authorization
+                },
+                body: JSON.stringify({ otp: otpInput }) // Convert OTP input to JSON string
+            });
+    
+            const data = await response.json(); // Parse the JSON response
+    
+            if (response.ok && data.success) {
+                setOtpVerified(true);
+                console.log('OTP verified successfully:', data.message);
+            } else {
+                console.error('OTP verification failed:', data.message);
+            }
+        } catch (error) {
+            console.error('OTP verification error:', error);
+        }
+    };
+    
+    
+
   return (
     <div className="signup-container">
         <div className="signUp-content otp-content">
@@ -54,7 +122,7 @@ const OtpComponent = () => {
                     ))}
                 </div>
                 {/* <div className="group-item"> */}
-                    <button className="mail-button otp-button">Confirm code</button>
+                    <button onClick={handleVerifyOtp} className="mail-button otp-button">Confirm code</button>
                     <p className="mail-login otp-login">Didn't get the mail? <span>Resend</span></p>
 
                 {/* </div> */}

@@ -4,24 +4,12 @@ import { useNavigate } from 'react-router-dom';
 
 
 const SignupComponent = () => {
-  const handleEmailSignup = (event) => {
-    event.preventDefault();
-    // Handle email signup logic here
-    console.log("Signed up with email");
-  };
-
-  const handleGoogleSignup = () => {
-    // Handle Google signup logic here
-    console.log("Signed up with Google");
-  };
 
   const navigate = useNavigate();
 
   const handleNavigateToRegister = () => {
     navigate('/register'); // Navigate to the Register page
   };
-
-  
 
   return (
     <div className="signup-container">
@@ -33,7 +21,7 @@ const SignupComponent = () => {
                     <h2>Register your account</h2>
                     <div className="signUp-option">
                         <div className="btn-content">
-                            <button onClick={handleNavigateToRegister} type="submit" className="signup-btn">
+                            <button onClick={handleNavigateToRegister} type="button" className="signup-btn">
                             <svg className="google-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M6.8 5.25C4.83939 5.25 3.25 6.83939 3.25 8.8V15.2C3.25 17.1606 4.83939 18.75 6.8 18.75H17.2C19.1606 18.75 20.75 17.1606 20.75 15.2V8.8C20.75 6.83939 19.1606 5.25 17.2 5.25H6.8ZM8.45 9.4C8.11863 9.15147 7.64853 9.21863 7.4 9.55C7.15147 9.88137 7.21863 10.3515 7.55 10.6L10.95 13.15C11.5722 13.6167 12.4278 13.6167 13.05 13.15L16.45 10.6C16.7814 10.3515 16.8485 9.88137 16.6 9.55C16.3515 9.21863 15.8814 9.15147 15.55 9.4L12.15 11.95C12.0611 12.0167 11.9389 12.0167 11.85 11.95L8.45 9.4Z" fill="#1D1D18"/>
                             </svg>
@@ -45,7 +33,7 @@ const SignupComponent = () => {
                         <div className="divider">or</div>
 
                         <div className="btn-content">
-                            <button onClick={handleGoogleSignup} className="google-btn">
+                            <button onClick={handleNavigateToRegister} type="button" className="google-btn">
                             <svg className="google-icon" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7.59266 10.51C7.91184 9.56628 8.52784 8.7452 9.35277 8.16386C10.1777 7.58251 11.1694 7.27062 12.1865 7.27266C13.3394 7.27266 14.3817 7.67266 15.2004 8.32732L17.5826 6C16.1309 4.76333 14.2706 4 12.1865 4C8.95976 4 6.18191 5.79866 4.84619 8.43332L7.59266 10.51Z" fill="#EA4335"/>
                             <path d="M14.9426 16.0086C14.199 16.4773 13.2549 16.7273 12.1866 16.7273C11.1736 16.7293 10.1856 16.4199 9.3625 15.8429C8.5394 15.2658 7.92289 14.4504 7.60026 13.512L4.84424 15.5566C5.52045 16.8941 6.56693 18.0195 7.86482 18.805C9.16272 19.5904 10.66 20.0044 12.1866 19.9999C14.1874 19.9999 16.0989 19.3046 17.5308 18L14.9433 16.0086H14.9426Z" fill="#34A853"/>
