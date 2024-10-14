@@ -15,10 +15,6 @@ import {
     FaSearch,
    
   } from "react-icons/fa";
-import MainComponent from "../dashboard/MainComponent";
-
-
-
 
 const ChatApp = () => {
   // User data with profile picture, full name, last message, and unread message count

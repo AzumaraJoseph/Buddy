@@ -3,15 +3,6 @@ import {
     FaSearch,
    
 } from "react-icons/fa";
-import { FaGoogle } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom';
-import imgLogout from '../assets/img/img-logout.png';
-import img1 from '../assets/img/img-1.png';
-import img2 from '../assets/img/img-2.png';
-import img3 from '../assets/img/img-3.png'
-import img4 from '../assets/img/img-4.png';
-import img5 from '../assets/img/img-5.png';
-import img6 from '../assets/img/img-6.png';
 import Sidebar from "../SideBar";
 
 
