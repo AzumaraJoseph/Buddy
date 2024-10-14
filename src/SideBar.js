@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaSignOutAlt } from "react-icons/fa"; // Icons from FontAwesome
 import imgLogout from './assets/img/img-logout.png'; // Import the image
 import logo from './assets/img/logo.png'
 import useAuth from './Auth/UseAuth';
@@ -13,16 +12,16 @@ const Sidebar = () => {
     const user = {
         profilePicture: "/path/to/profile.jpg",
         fullName: "Theresa Milly",
-        img: imgLogout,  // Use the imported image
+        img: imgLogout,
     };
 
     const navigate = useNavigate();
-    const [activeUser, setActiveUser] = useState(null); // State to track the active user
+    const [activeUser, setActiveUser] = useState(null); 
 
 
     const handleSidebarClick = (path, index) => {
-        console.log(`Navigating to ${path}`); // Debugging line
-        setActiveUser(index); // Set the clicked user as active
+        console.log(`Navigating to ${path}`); 
+        setActiveUser(index);
         navigate(path);
     };
 
@@ -31,7 +30,6 @@ const Sidebar = () => {
         <div>
         <img src={logo} alt={logo} width={120} height={36} className="logo" />
 
-      {/* Navigation Items */}
       <ul className="sidebar-menu">
         <li onClick={() => handleSidebarClick("/main", 0)} className={`sidebar-item ${activeUser === 0 ? "active" : ""}`} >
             <div className="sidebar-item-style">
@@ -89,10 +87,8 @@ const Sidebar = () => {
 
         </div>
 
-      {/* Logout Section */}
       <div className="sidebar-logout">
         <img src={user.img} alt={user.fullName} className="profile-picture" />
-        {/* <img src={myImage} alt="Description of my image" width={300} height={300} /> */}
         <div className="user-info">
           <h4>{user.fullName}</h4>
           <p className="influencer-text">Influencer</p>
