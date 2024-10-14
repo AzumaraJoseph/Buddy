@@ -87,6 +87,11 @@
   border-radius: 5px;
 }
 
+.sidebar-menu li.active {
+  background-color: #FF8600;
+  font-weight: bold;
+}
+
 .sidebar-icon {
   margin-right: 10px;
 }

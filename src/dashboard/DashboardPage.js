@@ -14,7 +14,7 @@ import img6 from '../assets/img/img-6.png';
 import {
     FaSearch,
    
-  } from "react-icons/fa";
+} from "react-icons/fa";
 
 
 
