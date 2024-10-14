@@ -157,7 +157,7 @@ const DashBoardPage
             <Route path="/chatwindow" element={<ChatWindow />} /> */}
             <Route path="/" element={<MainComponent />} />
             <Route path="/chatwindow" element={<ChatWindow />} />
-            <Route path="*" element={<MainComponent />} /> This will act as a catch-all for undefined routes
+            {/* <Route path="*" element={<MainComponent />} /> This will act as a catch-all for undefined routes */}
             {/* <Route path="/main" element={<MainComponent />} /> */}
 
         </Routes>
