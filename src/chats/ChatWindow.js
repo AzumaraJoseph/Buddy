@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-// import ChatList from "./ChatList";
+import React, { useState, useEffect, useMemo  } from "react";// import ChatList from "./ChatList";
 // import ChatMessages from "./ChatMessages";
 import Sidebar from "../SideBar";
 import imgLogout from '../assets/img/img-logout.png';
@@ -17,6 +16,9 @@ import {
   } from "react-icons/fa";
 
 const ChatApp = () => {
+    // State to track the selected user
+  const [selectedUser, setSelectedUser] = useState(null);
+
   // User data with profile picture, full name, last message, and unread message count
 //   const users = [
 //     {
@@ -127,14 +129,28 @@ const ChatApp = () => {
     ],
   };
 
-  // State to track the selected user
-  const [selectedUser, setSelectedUser] = useState(null);
+  
+  // Memoizing the users array to prevent unnecessary re-renders
+  const memoizedUsers = useMemo(() => users, []); // No dependencies, as 'users' is constant
+
+  // Set the first user as the default selected user when the component mounts
+  useEffect(() => {
+      if (memoizedUsers && memoizedUsers.length > 0) {
+          setSelectedUser(memoizedUsers[0]); // Default to the first user
+      }
+  }, [memoizedUsers]);
+
+  const handleUserClick = (user) => {
+      console.log("Selected user:", user); // Debug log to see the selected user
+      setSelectedUser(user);
+  };
 
   const user = {
     profilePicture: "/path/to/profile.jpg",
     fullName: "Azumara Joseph",
     img: {imgLogout}
   };
+
 
   return (
     <div className="chat-app-container">
@@ -237,11 +253,15 @@ const ChatApp = () => {
                         ))}
                         </div> */}
                         <div className="user-border">
-                            {users.map((user) => (
+                            {memoizedUsers.map((user) => (
                                 <div
                                 key={user.id}
                                 className="user"
-                                onClick={() => setSelectedUser(user)} // Selecting user on click
+                                onClick={() => handleUserClick(user)} // Selecting user on click
+                        style={{ backgroundColor: selectedUser?.id === user.id ? '#f0f0f0' : 'transparent' }} // Highlight selected user
+                        //         onClick={() => setSelectedUser(user)} // Selecting user on click
+                        // style={{ backgroundColor: selectedUser === user ? '#f0f0f0' : 'transparent' }}
+                                // onClick={() => setSelectedUser(user)} 
                                 >
                                 <img
                                     src={user.profilePicture}
