@@ -105,7 +105,6 @@ const ChatApp = () => {
         },
     ];
 
-  // Chat history data for each user
   const chatHistory = {
     1: [
       { sender: "Jane Smith", message: "Hey! How are you?", image: img2 },
