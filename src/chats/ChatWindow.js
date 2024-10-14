@@ -188,25 +188,8 @@ const ChatApp = () => {
                     </div>
                 </div>
                 
-            </div>
-
-            {/* <div className="flex"> */}
-                {/* ChatList component */}
-                {/* <ChatList
-                    users={users}
-                    onSelectUser={(user) => setSelectedUser(user)} // Passing selected user to state
-                /> */}
-
-                {/* ChatMessages component */}
-                {/* {selectedUser && (
-                    <ChatMessages
-                    user={selectedUser}
-                    chatHistory={chatHistory[selectedUser.id]}
-                    />
-                )} */}
-
-
-
+            </div>             
+                
                 <div className="flex">
                     {/* User List Section */}
                     <div className="user-list">
@@ -229,39 +212,13 @@ const ChatApp = () => {
                         <input type="text" placeholder="Search Here..." className="search-bar--input" />
                         </div>
 
-                        {/* List of users */}
-                        {/* <div className="user-border">
-                        {users.map((user) => (
-                            <div
-                            key={user.id}
-                            className="user"
-                            onClick={() => setSelectedUser(user)} // Selecting user on click
-                            >
-                            <img
-                                src={user.profilePicture}
-                                alt={user.fullName}
-                                className="profile-picture"
-                            />
-                            <div className="user-info">
-                                <h4>{user.fullName}</h4>
-                                <p>{user.chatMessage}</p>
-                                {user.unreadMessage > 0 && (
-                                <span className="unread-badge">{user.unreadMessage}</span>
-                                )}
-                            </div>
-                            </div>
-                        ))}
-                        </div> */}
                         <div className="user-border">
                             {memoizedUsers.map((user) => (
                                 <div
                                 key={user.id}
                                 className="user"
                                 onClick={() => handleUserClick(user)} // Selecting user on click
-                        style={{ backgroundColor: selectedUser?.id === user.id ? '#f0f0f0' : 'transparent' }} // Highlight selected user
-                        //         onClick={() => setSelectedUser(user)} // Selecting user on click
-                        // style={{ backgroundColor: selectedUser === user ? '#f0f0f0' : 'transparent' }}
-                                // onClick={() => setSelectedUser(user)} 
+                        style={{ backgroundColor: selectedUser?.id === user.id ? '#f0f0f0' : 'transparent' }} 
                                 >
                                 <img
                                     src={user.profilePicture}
@@ -293,9 +250,7 @@ const ChatApp = () => {
                                         <span className="unread-badge">{user.unreadMessage}</span>
                                     )}
                                     </div>
-                                    {/* {user.unreadMessage > 0 && (
-                                    <span className="unread-badge">{user.unreadMessage}</span>
-                                    )} */}
+                                    
                                 </div>
                                 </div>
                             ))}
@@ -357,22 +312,7 @@ const ChatApp = () => {
                                 ))}
                             </div>
 
-                            {/* Chat input section */}
-                            {/* <div className="chatbox-input-container">
-                                <FaMicrophone className="mic-icon" />
-
-                                <input
-                                type="text"
-                                placeholder="Type a message..."
-                                className="chatbox-input"
-                                />
-
-                                <div className="right-icons">
-                                <FaPaperclip className="icon" />
-                                <FaCamera className="icon" />
-                                <FaSmile className="icon" />
-                                </div>
-                            </div> */}
+                            
 
                             <div className="chatbox-input-container">
                                 <div className="input-wrapper">
@@ -438,7 +378,6 @@ const ChatApp = () => {
 
 
 
-            {/* </div> */}
             
         </div>
             
