@@ -110,10 +110,22 @@ const ChatApp = () => {
     1: [
       { sender: "Jane Smith", message: "Hey! How are you?", image: img2 },
       { sender: "You", message: "I'm good, thanks! How about you?", image: img5 },
+      { sender: "Jane Smith", message: "I would like to discuss something with you", image: img2 },
+      { sender: "You", message: "Okay, that's fine, you can go ahead", image: img5 },
+      { sender: "You", message: "Sure, anytime after 4!", image: img5 },
+      { sender: "Jane Smith", message: "Meeting at 5 PM?", image: img2 },
+      { sender: "You", message: "Yes, see you then!", image: img5 },
     ],
     2: [
       { sender: "Michael Johnson", message: "What's up?", image: img3 },
       { sender: "You", message: "Not much, just working.", image: img6 },
+      { sender: "Michael Johnson", message: "Have you heard of the lates update?", image: img3 },
+      { sender: "Michael Johnson", message: "We were asked to clear the files from the table to the admin's", image: img3 },
+      { sender: "You", message: "Okay thats fine, something is about to happen.", image: img6 },
+      { sender: "Michael Johnson", message: "I guess so too, but lets keep our fingers crossed", image: img3 },
+
+
+
     ],
     3: [
       { sender: "Emily Davis", message: "Can we talk later?", image: img4 },
