@@ -61,7 +61,7 @@
 
 .sidebar-item-style span {
   line-height: 137.1%;
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
   font-size: 14px;
   font-family: lexend;
   margin-left: 8px;
@@ -194,8 +194,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
-  color: black;
+  background-color: #ffeeda;;
+  color: #FF8600;
   padding: 10px;
   border: none;
   cursor: pointer;
@@ -598,12 +598,16 @@
 }
 
 .members-posts {
-  /* width: 309px; */
+  width: 110px;
   border: 1px solid #F1F1F1;
   background-color: #FFFFFF;
   border-radius: 12px;
   padding: 10px;
   margin-top: 20px;
+}
+
+.members-posts:not(:last-child) {
+  margin-right: 10px;
 }
 
 .find {
@@ -1443,7 +1447,7 @@ button {
 }
 
 button:hover {
-  background-color: #FF8600;
+  /* background-color: #FF8600; */
 }
 
 

@@ -330,12 +330,12 @@ const MainComponent = () => {
                             <div className="members-posts">
                                 <div className="members-content">
                                     <img
-                                        src={img1}
+                                        src={img4}
                                         alt="Jossy"
                                         className="profile-picture"
                                     />
                                     <div style={{ textAlign: 'center', margin: '8px 0px 12px 0'}}>
-                                        <h3 style={{ margin: '0', fontSize: '14px', fontFamily: 'lexend', fontWeight: '600', color: '#3B3B45'}}>Wanda Parker</h3>
+                                        <h3 style={{ margin: '0', fontSize: '14px', fontFamily: 'lexend', fontWeight: '600', color: '#3B3B45'}}>Janice Miller</h3>
                                         <p style={{ margin: '0', fontSize: '11px', fontFamily: 'lexend', fontWeight: '400', color: '#818187' }}>@ashking1234</p>
 
                                     </div>
@@ -345,7 +345,7 @@ const MainComponent = () => {
                                         </svg>
 
 
-                                        <p style={{ margin: '0 0 0 10px', fontSize: '14px', fontFamily: 'lexend', fontWeight: '700', color: '#3B3B45' }}>10.3%</p>
+                                        <p style={{ margin: '0 0 0 10px', fontSize: '14px', fontFamily: 'lexend', fontWeight: '700', color: '#3B3B45' }}>8.6%</p>
                                     </div>
 
                                 </div>
@@ -355,12 +355,12 @@ const MainComponent = () => {
                             <div className="members-posts">
                                 <div className="members-content">
                                     <img
-                                        src={img1}
+                                        src={img5}
                                         alt="Jossy"
                                         className="profile-picture"
                                     />
                                     <div style={{ textAlign: 'center', margin: '8px 0px 12px 0'}}>
-                                        <h3 style={{ margin: '0', fontSize: '14px', fontFamily: 'lexend', fontWeight: '600', color: '#3B3B45'}}>Wanda Parker</h3>
+                                        <h3 style={{ margin: '0', fontSize: '14px', fontFamily: 'lexend', fontWeight: '600', color: '#3B3B45'}}>Terry Brown</h3>
                                         <p style={{ margin: '0', fontSize: '11px', fontFamily: 'lexend', fontWeight: '400', color: '#818187' }}>@ashking1234</p>
 
                                     </div>
@@ -370,7 +370,7 @@ const MainComponent = () => {
                                         </svg>
 
 
-                                        <p style={{ margin: '0 0 0 10px', fontSize: '14px', fontFamily: 'lexend', fontWeight: '700', color: '#3B3B45' }}>10.3%</p>
+                                        <p style={{ margin: '0 0 0 10px', fontSize: '14px', fontFamily: 'lexend', fontWeight: '700', color: '#3B3B45' }}>9.8%</p>
                                     </div>
 
                                 </div>
