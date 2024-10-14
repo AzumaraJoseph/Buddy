@@ -66,13 +66,13 @@ const AppRoutes = () => {
     <Routes>
 
         {/* Routes without Sidebar (or different layouts) */}
-        <Route path="signup" element={<Signup />} />
+        {/* <Route path="signup" element={<Signup />} />
         <Route path="register" element={<Register />} />
         <Route path="mail" element={<Mail />} />
         <Route path="verify-mail" element={<VerifyMail />} />
         <Route path="otp" element={<OTP />} />
-        <Route path="login" element={<Login />} />
-        {/* <Route
+        <Route path="login" element={<Login />} /> */}
+        <Route
         path="/"
         element={
           <PublicRoute>
@@ -128,7 +128,7 @@ const AppRoutes = () => {
             <Login />
           </PublicRoute>
         }
-      /> */}
+      />
 
 
 

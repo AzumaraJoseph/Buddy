@@ -11,6 +11,12 @@ const SignupComponent = () => {
     navigate('/register'); // Navigate to the Register page
   };
 
+//   const navigate = useNavigate();
+
+  const handleNavigateToLogin = () => {
+      navigate('/login'); // Navigate to the Register page
+    };
+
   return (
     <div className="signup-container">
         <div className="signUp-content">
@@ -50,7 +56,7 @@ const SignupComponent = () => {
                     <p>By clicking the button above, you agree to our <span>Terms of Service</span> and <span>Privacy Policy</span>.</p>
 
                 </div>
-                <p>Already have an account? <span>Login</span></p>
+                <p>Already have an account? <span onClick={handleNavigateToLogin}>Login</span></p>
 
             </div>
 
