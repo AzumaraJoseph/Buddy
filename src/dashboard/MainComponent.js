@@ -24,7 +24,7 @@ const MainComponent = () => {
 
         <div className="main">
             <div className="top">
-                <h4>My Portfolio</h4>
+                <h4>My Portfoliosssssss</h4>
                 <div className="find">
                     {/* Input field with search icon inside */}
                     <div className="search-bar">
