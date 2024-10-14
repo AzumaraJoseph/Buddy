@@ -263,7 +263,7 @@
 
 /* Active user styles */
 .user.active {
-  background-color: #e6f7ff; /* Light blue or any color to indicate active user */
+  background-color: #e6f7ff; 
   font-weight: bold;
 }
 
@@ -393,9 +393,9 @@
 }
 
 .watchlist {
-  background-color: green;
+  /* background-color: green; */
   /* height: 100px; */
-  width: 300px;
+  width: 275px;
 }
 
 .count {
@@ -1594,4 +1594,73 @@ button {
 
 .otp-input:focus {
   border: 1px solid #FF8600; /* Gold border on focus */
+}
+
+.growth {
+  height: 300px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.growth-nav {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 27px;
+}
+
+.growth-nav h2 {
+  margin: 0;
+  font-family: lexend;
+  font-weight: 700;
+  font-size: 20px;
+  color: #3B3B45;
+  width: 95px;
+}
+
+.growth-nav p {
+  margin: 0;
+  font-family: lexend;
+  font-weight: 600;
+  font-size: 12px;
+  color: #FF8600;
+  width: 62px;
+}
+
+.growth-chart {
+  height: 96px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #F6F6F6;
+}
+
+.growth-details {
+  width: 96px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+.growth-details h2 {
+    height: 23px;
+    color: #3B3B45;
+    font-weight: 600;
+    font-family: lexend;
+    font-size: 18px;
+    margin: 0px;
+}
+
+.revenue {
+  height: 300px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  margin-bottom: 10px;
+}
+
+.trending-news {
+  height: 300px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
 }
