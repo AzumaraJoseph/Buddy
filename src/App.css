@@ -7,7 +7,7 @@
   /* margin: 0 auto; */
   padding: 20px;
   font-family: Arial, sans-serif;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 10px;
   background-color: #F5F5F5;
 }
@@ -19,9 +19,10 @@
 .layout-content {
   flex: 1;
   padding: 20px;
-  background-color: #fff;
-  height: 100vh;
+  background-color: #F5F5F5;
+  /* height: 100vh; */
   overflow-y: auto;
+  /* background-color: red; */
 }
 
 
@@ -94,13 +95,14 @@
 } */
 
 .sidebar-item:hover {
-  background-color: #3a3f47;
+  background-color: #FF8600;
   border-radius: 5px;
 }
 
 .sidebar-menu li.active {
-  background-color: #FF8600;
+  background-color: #fff;
   font-weight: bold;
+  color: #FF8600;
 }
 
 .sidebar-icon {
@@ -235,7 +237,7 @@
   width: 960px;
   height: 940px;
   background-color: white;
-  border: 12px;
+  border-radius: 12px;
 }
 
 .user-list {
