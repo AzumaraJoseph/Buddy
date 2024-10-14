@@ -44,6 +44,7 @@ const App = () => {
     <Router>
       <AppRoutes />
     </Router>
+    
   );
 };
 

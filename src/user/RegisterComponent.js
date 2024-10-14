@@ -7,6 +7,9 @@ const RegisterComponent = () => {
 
     const navigate = useNavigate(); // Initialize useNavigate
     // const [otp, setOtp] = useState("");
+    const handleNavigateToLogin = () => {
+        navigate('/login'); // Navigate to the Register page
+      };
 
 
     const [formData, setFormData] = useState({
@@ -142,7 +145,7 @@ const RegisterComponent = () => {
                     <p>By clicking the button above, you agree to our <span>Terms of Service</span> and <span>Privacy Policy</span>.</p>
 
                 </div>
-                <p>Already have an account? <span>Login</span></p>
+                <p>Already have an account? <span onClick={handleNavigateToLogin}>Login</span></p>
 
             </div>
 

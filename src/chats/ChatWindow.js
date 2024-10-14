@@ -15,6 +15,7 @@ import {
     FaSearch,
    
   } from "react-icons/fa";
+import MainComponent from "../dashboard/MainComponent";
 
 
 
@@ -424,10 +425,8 @@ const ChatApp = () => {
             {/* </div> */}
             
         </div>
-
-        
             
-        </div>
+    </div>
   );
 };
 

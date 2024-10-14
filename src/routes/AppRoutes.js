@@ -58,6 +58,7 @@ import Dashboard from '../dashboard/DashboardPage';
 import ChatWindow from '../chats/ChatWindow';
 // import PrivateRoute from '../routes/PrivateRoutes';
 import PublicRoute from '../routes/PublicRoutes';
+import MainComponent from '../dashboard/MainComponent';
 
 const AppRoutes = () => {
   return (
@@ -123,6 +124,12 @@ const AppRoutes = () => {
         path="/dashboard"
         element={<Dashboard />}
       />
+      
+      <Route
+        path="/main"
+        element={<MainComponent />}
+      />
+
       <Route
         path="/chatwindow"
         element={<ChatWindow />}
