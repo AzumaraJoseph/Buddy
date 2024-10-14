@@ -561,10 +561,49 @@
 }
 
 .members {
-  height: 100px;
-  background-color: orange;
+  background-color: #fff;
   margin-bottom: 10px;
+  padding: 20px 15px;
+  border-radius: 16px;
 
+}
+
+.members h2 {
+  color: #3B3B45;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: lexend;
+  width: 191px;
+  margin: 0;
+  line-height: 26.6px;
+}
+
+.members-container {
+  display: flex;
+}
+
+.members-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.members-rating {
+  display: flex;
+  justify-content: space-evenly;
+  width: 65px;
+  /* background-color: #F6F6F6; */
+  margin-right: 5px;
+  border-radius: 17px;
+}
+
+.members-posts {
+  /* width: 309px; */
+  border: 1px solid #F1F1F1;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 10px;
+  margin-top: 20px;
 }
 
 .find {

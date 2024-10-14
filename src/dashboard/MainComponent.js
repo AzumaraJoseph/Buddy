@@ -6,6 +6,12 @@ import {
 import Sidebar from "../SideBar";
 import chart from '../assets/img/Frame 37675.jpg'
 import heart from '../assets/img/heart.png'
+import img1 from '../assets/img/img-1.png';
+import img2 from '../assets/img/img-2.png';
+import img3 from '../assets/img/img-3.png'
+import img4 from '../assets/img/img-4.png';
+import img5 from '../assets/img/img-5.png';
+
 
 
 
@@ -243,132 +249,135 @@ const MainComponent = () => {
 
                     </div>
 
-                    <div className="trending">
-                        <h2>Trending Posts</h2>
-                        <div className="trending-container">
-                            <div className="trending-posts">
-                                <div className="trending-content">
-                                    <h3>8 Upcoming Influencer Marketing Trends and Benefits</h3>
-                                    <p>Marketing is evolving. It's changing from a one-way street to a two-way conversa…</p>
+                    <div className="members">
+                        <h2>Potential Members</h2>
+                        <div className="members-container">
+                            <div className="members-posts">
+                                <div className="members-content">
+                                    <img
+                                        src={img1}
+                                        alt="Jossy"
+                                        className="profile-picture"
+                                    />
+                                    <div style={{ textAlign: 'center', margin: '8px 0px 12px 0'}}>
+                                        <h3 style={{ margin: '0', fontSize: '14px', fontFamily: 'lexend', fontWeight: '600', color: '#3B3B45'}}>Wanda Parker</h3>
+                                        <p style={{ margin: '0', fontSize: '11px', fontFamily: 'lexend', fontWeight: '400', color: '#818187' }}>@ashking1234</p>
+
+                                    </div>
+                                    <div className="members-rating">
+                                        <svg width="16" height="17" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.7667 5.51667C18.6821 5.31304 18.5203 5.15123 18.3167 5.06667C18.2165 5.02397 18.1089 5.00132 18 5H13.8334C13.6124 5 13.4004 5.0878 13.2441 5.24408C13.0878 5.40036 13 5.61232 13 5.83333C13 6.05435 13.0878 6.26631 13.2441 6.42259C13.4004 6.57887 13.6124 6.66667 13.8334 6.66667H15.9917L11.3334 11.325L8.5917 8.575C8.51423 8.49689 8.42206 8.4349 8.32051 8.39259C8.21896 8.35028 8.11004 8.3285 8.00003 8.3285C7.89002 8.3285 7.7811 8.35028 7.67955 8.39259C7.578 8.4349 7.48583 8.49689 7.40836 8.575L2.40836 13.575C2.33026 13.6525 2.26826 13.7446 2.22595 13.8462C2.18365 13.9477 2.16187 14.0567 2.16187 14.1667C2.16187 14.2767 2.18365 14.3856 2.22595 14.4871C2.26826 14.5887 2.33026 14.6809 2.40836 14.7583C2.48583 14.8364 2.578 14.8984 2.67955 14.9407C2.7811 14.9831 2.89002 15.0048 3.00003 15.0048C3.11004 15.0048 3.21896 14.9831 3.32051 14.9407C3.42206 14.8984 3.51423 14.8364 3.5917 14.7583L8.00003 10.3417L10.7417 13.0917C10.8192 13.1698 10.9113 13.2318 11.0129 13.2741C11.1144 13.3164 11.2234 13.3382 11.3334 13.3382C11.4434 13.3382 11.5523 13.3164 11.6538 13.2741C11.7554 13.2318 11.8476 13.1698 11.925 13.0917L17.1667 7.84167V10C17.1667 10.221 17.2545 10.433 17.4108 10.5893C17.5671 10.7455 17.779 10.8333 18 10.8333C18.221 10.8333 18.433 10.7455 18.5893 10.5893C18.7456 10.433 18.8334 10.221 18.8334 10V5.83333C18.832 5.72444 18.8094 5.61685 18.7667 5.51667Z" fill="#35DB95"/>
+                                        </svg>
+
+
+                                        <p style={{ margin: '0 0 0 10px', fontSize: '14px', fontFamily: 'lexend', fontWeight: '700', color: '#3B3B45' }}>10.3%</p>
+                                    </div>
+
                                 </div>
 
-                                <div style={{ width:'218px', display: 'flex' }}>
-                                    <div className="trending-rating" >
-                                        <svg
-                                        width="16"
-                                        height="17"
-                                        viewBox="0 0 24 24"
-                                        fill="red" // You can change the color here
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                                        </svg>
-                                        <p>260</p>
-                                    </div>
+                                
+                            </div>
+                            <div className="members-posts">
+                                <div className="members-content">
+                                    <img
+                                        src={img2}
+                                        alt="Jossy"
+                                        className="profile-picture"
+                                    />
+                                    <div style={{ textAlign: 'center', margin: '8px 0px 12px 0'}}>
+                                        <h3 style={{ margin: '0', fontSize: '14px', fontFamily: 'lexend', fontWeight: '600', color: '#3B3B45'}}>Terry Brown</h3>
+                                        <p style={{ margin: '0', fontSize: '11px', fontFamily: 'lexend', fontWeight: '400', color: '#818187' }}>@ashking1234</p>
 
-                                    <div className="trending-rating">
-                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_1_258)">
-                                        <path d="M15 4.59207V11.344C15 12.4974 14.0749 13.4361 12.9378 13.4361H6.39514L2.0549 16.5V13.4361C0.921112 13.4322 0 12.4951 0 11.344V4.59207C0 3.43853 0.92514 2.5 2.06223 2.5H12.9378C14.0749 2.5 15 3.43853 15 4.59207Z" fill="#FFB800"/>
-                                        <path d="M16 4.6043V11.3957C16 12.5559 15.0135 13.5 13.801 13.5H8V2.5H13.801C15.0135 2.5 16 3.44402 16 4.6043Z" fill="#FF8600"/>
-                                        <path d="M5 5.5H12V6.5H5V5.5Z" fill="white"/>
-                                        <path d="M5 7.5H12V8.5H5V7.5Z" fill="white"/>
-                                        <path d="M5 9.5H12V10.5H5V9.5Z" fill="white"/>
-                                        <path d="M8 5.5H11V6.5H8V5.5Z" fill="#E1E1E3"/>
-                                        <path d="M8 7.5H11V8.5H8V7.5Z" fill="#E1E1E3"/>
-                                        <path d="M8 8.5H11V9.5H8V8.5Z" fill="#E1E1E3"/>
-                                        </g>
-                                        <defs>
-                                        <clipPath id="clip0_1_258">
-                                        <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
-                                        </clipPath>
-                                        </defs>
+                                    </div>
+                                    <div className="members-rating">
+                                        <svg width="16" height="17" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.7667 5.51667C18.6821 5.31304 18.5203 5.15123 18.3167 5.06667C18.2165 5.02397 18.1089 5.00132 18 5H13.8334C13.6124 5 13.4004 5.0878 13.2441 5.24408C13.0878 5.40036 13 5.61232 13 5.83333C13 6.05435 13.0878 6.26631 13.2441 6.42259C13.4004 6.57887 13.6124 6.66667 13.8334 6.66667H15.9917L11.3334 11.325L8.5917 8.575C8.51423 8.49689 8.42206 8.4349 8.32051 8.39259C8.21896 8.35028 8.11004 8.3285 8.00003 8.3285C7.89002 8.3285 7.7811 8.35028 7.67955 8.39259C7.578 8.4349 7.48583 8.49689 7.40836 8.575L2.40836 13.575C2.33026 13.6525 2.26826 13.7446 2.22595 13.8462C2.18365 13.9477 2.16187 14.0567 2.16187 14.1667C2.16187 14.2767 2.18365 14.3856 2.22595 14.4871C2.26826 14.5887 2.33026 14.6809 2.40836 14.7583C2.48583 14.8364 2.578 14.8984 2.67955 14.9407C2.7811 14.9831 2.89002 15.0048 3.00003 15.0048C3.11004 15.0048 3.21896 14.9831 3.32051 14.9407C3.42206 14.8984 3.51423 14.8364 3.5917 14.7583L8.00003 10.3417L10.7417 13.0917C10.8192 13.1698 10.9113 13.2318 11.0129 13.2741C11.1144 13.3164 11.2234 13.3382 11.3334 13.3382C11.4434 13.3382 11.5523 13.3164 11.6538 13.2741C11.7554 13.2318 11.8476 13.1698 11.925 13.0917L17.1667 7.84167V10C17.1667 10.221 17.2545 10.433 17.4108 10.5893C17.5671 10.7455 17.779 10.8333 18 10.8333C18.221 10.8333 18.433 10.7455 18.5893 10.5893C18.7456 10.433 18.8334 10.221 18.8334 10V5.83333C18.832 5.72444 18.8094 5.61685 18.7667 5.51667Z" fill="#35DB95"/>
                                         </svg>
 
-                                        <p style={{ margin: '0', fontSize: '14px' }}>260</p>
+
+                                        <p style={{ margin: '0 0 0 10px', fontSize: '14px', fontFamily: 'lexend', fontWeight: '700', color: '#3B3B45' }}>9.8%</p>
                                     </div>
 
-                                    <div className="trending-rating">
-                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_1_270)">
-                                        <path d="M16 6.49746L8.75 0.5V4.16468C6.57562 4.27346 4.59781 5.13524 3.07469 6.49746C1.18844 8.18414 0 10.6376 0 13.3751V16.5H0.9375C0.9375 12.2774 4.37219 8.84181 8.59375 8.84181H8.75V12.4949L16 6.49746Z" fill="#FF641A"/>
-                                        <path d="M8.75 12.4959V8.84375H8.59375C4.37219 8.84375 0.9375 12.2784 0.9375 16.5H0V13.3759C0 10.6391 1.18844 8.18625 3.07469 6.5H16L8.75 12.4959Z" fill="#F03800"/>
-                                        </g>
-                                        <defs>
-                                        <clipPath id="clip0_1_270">
-                                        <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
-                                        </clipPath>
-                                        </defs>
+                                </div>
+
+                                
+                            </div>
+                            <div className="members-posts">
+                                <div className="members-content">
+                                    <img
+                                        src={img3}
+                                        alt="Jossy"
+                                        className="profile-picture"
+                                    />
+                                    <div style={{ textAlign: 'center', margin: '8px 0px 12px 0'}}>
+                                        <h3 style={{ margin: '0', fontSize: '14px', fontFamily: 'lexend', fontWeight: '600', color: '#3B3B45'}}>Lucas Holmes</h3>
+                                        <p style={{ margin: '0', fontSize: '11px', fontFamily: 'lexend', fontWeight: '400', color: '#818187' }}>@ashking1234</p>
+
+                                    </div>
+                                    <div className="members-rating">
+                                        <svg width="16" height="17" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.7667 5.51667C18.6821 5.31304 18.5203 5.15123 18.3167 5.06667C18.2165 5.02397 18.1089 5.00132 18 5H13.8334C13.6124 5 13.4004 5.0878 13.2441 5.24408C13.0878 5.40036 13 5.61232 13 5.83333C13 6.05435 13.0878 6.26631 13.2441 6.42259C13.4004 6.57887 13.6124 6.66667 13.8334 6.66667H15.9917L11.3334 11.325L8.5917 8.575C8.51423 8.49689 8.42206 8.4349 8.32051 8.39259C8.21896 8.35028 8.11004 8.3285 8.00003 8.3285C7.89002 8.3285 7.7811 8.35028 7.67955 8.39259C7.578 8.4349 7.48583 8.49689 7.40836 8.575L2.40836 13.575C2.33026 13.6525 2.26826 13.7446 2.22595 13.8462C2.18365 13.9477 2.16187 14.0567 2.16187 14.1667C2.16187 14.2767 2.18365 14.3856 2.22595 14.4871C2.26826 14.5887 2.33026 14.6809 2.40836 14.7583C2.48583 14.8364 2.578 14.8984 2.67955 14.9407C2.7811 14.9831 2.89002 15.0048 3.00003 15.0048C3.11004 15.0048 3.21896 14.9831 3.32051 14.9407C3.42206 14.8984 3.51423 14.8364 3.5917 14.7583L8.00003 10.3417L10.7417 13.0917C10.8192 13.1698 10.9113 13.2318 11.0129 13.2741C11.1144 13.3164 11.2234 13.3382 11.3334 13.3382C11.4434 13.3382 11.5523 13.3164 11.6538 13.2741C11.7554 13.2318 11.8476 13.1698 11.925 13.0917L17.1667 7.84167V10C17.1667 10.221 17.2545 10.433 17.4108 10.5893C17.5671 10.7455 17.779 10.8333 18 10.8333C18.221 10.8333 18.433 10.7455 18.5893 10.5893C18.7456 10.433 18.8334 10.221 18.8334 10V5.83333C18.832 5.72444 18.8094 5.61685 18.7667 5.51667Z" fill="#35DB95"/>
                                         </svg>
 
-                                        <p  style={{ margin: '0', fontSize: '14px' }}>123</p>
+
+                                        <p style={{ margin: '0 0 0 10px', fontSize: '14px', fontFamily: 'lexend', fontWeight: '700', color: '#3B3B45' }}>6.5%</p>
                                     </div>
+
+                                </div>
+
+                                
+                            </div>
+                            <div className="members-posts">
+                                <div className="members-content">
+                                    <img
+                                        src={img1}
+                                        alt="Jossy"
+                                        className="profile-picture"
+                                    />
+                                    <div style={{ textAlign: 'center', margin: '8px 0px 12px 0'}}>
+                                        <h3 style={{ margin: '0', fontSize: '14px', fontFamily: 'lexend', fontWeight: '600', color: '#3B3B45'}}>Wanda Parker</h3>
+                                        <p style={{ margin: '0', fontSize: '11px', fontFamily: 'lexend', fontWeight: '400', color: '#818187' }}>@ashking1234</p>
+
+                                    </div>
+                                    <div className="members-rating">
+                                        <svg width="16" height="17" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.7667 5.51667C18.6821 5.31304 18.5203 5.15123 18.3167 5.06667C18.2165 5.02397 18.1089 5.00132 18 5H13.8334C13.6124 5 13.4004 5.0878 13.2441 5.24408C13.0878 5.40036 13 5.61232 13 5.83333C13 6.05435 13.0878 6.26631 13.2441 6.42259C13.4004 6.57887 13.6124 6.66667 13.8334 6.66667H15.9917L11.3334 11.325L8.5917 8.575C8.51423 8.49689 8.42206 8.4349 8.32051 8.39259C8.21896 8.35028 8.11004 8.3285 8.00003 8.3285C7.89002 8.3285 7.7811 8.35028 7.67955 8.39259C7.578 8.4349 7.48583 8.49689 7.40836 8.575L2.40836 13.575C2.33026 13.6525 2.26826 13.7446 2.22595 13.8462C2.18365 13.9477 2.16187 14.0567 2.16187 14.1667C2.16187 14.2767 2.18365 14.3856 2.22595 14.4871C2.26826 14.5887 2.33026 14.6809 2.40836 14.7583C2.48583 14.8364 2.578 14.8984 2.67955 14.9407C2.7811 14.9831 2.89002 15.0048 3.00003 15.0048C3.11004 15.0048 3.21896 14.9831 3.32051 14.9407C3.42206 14.8984 3.51423 14.8364 3.5917 14.7583L8.00003 10.3417L10.7417 13.0917C10.8192 13.1698 10.9113 13.2318 11.0129 13.2741C11.1144 13.3164 11.2234 13.3382 11.3334 13.3382C11.4434 13.3382 11.5523 13.3164 11.6538 13.2741C11.7554 13.2318 11.8476 13.1698 11.925 13.0917L17.1667 7.84167V10C17.1667 10.221 17.2545 10.433 17.4108 10.5893C17.5671 10.7455 17.779 10.8333 18 10.8333C18.221 10.8333 18.433 10.7455 18.5893 10.5893C18.7456 10.433 18.8334 10.221 18.8334 10V5.83333C18.832 5.72444 18.8094 5.61685 18.7667 5.51667Z" fill="#35DB95"/>
+                                        </svg>
+
+
+                                        <p style={{ margin: '0 0 0 10px', fontSize: '14px', fontFamily: 'lexend', fontWeight: '700', color: '#3B3B45' }}>10.3%</p>
+                                    </div>
+
+                                </div>
+
+                                
+                            </div>
+                            <div className="members-posts">
+                                <div className="members-content">
+                                    <img
+                                        src={img1}
+                                        alt="Jossy"
+                                        className="profile-picture"
+                                    />
+                                    <div style={{ textAlign: 'center', margin: '8px 0px 12px 0'}}>
+                                        <h3 style={{ margin: '0', fontSize: '14px', fontFamily: 'lexend', fontWeight: '600', color: '#3B3B45'}}>Wanda Parker</h3>
+                                        <p style={{ margin: '0', fontSize: '11px', fontFamily: 'lexend', fontWeight: '400', color: '#818187' }}>@ashking1234</p>
+
+                                    </div>
+                                    <div className="members-rating">
+                                        <svg width="16" height="17" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.7667 5.51667C18.6821 5.31304 18.5203 5.15123 18.3167 5.06667C18.2165 5.02397 18.1089 5.00132 18 5H13.8334C13.6124 5 13.4004 5.0878 13.2441 5.24408C13.0878 5.40036 13 5.61232 13 5.83333C13 6.05435 13.0878 6.26631 13.2441 6.42259C13.4004 6.57887 13.6124 6.66667 13.8334 6.66667H15.9917L11.3334 11.325L8.5917 8.575C8.51423 8.49689 8.42206 8.4349 8.32051 8.39259C8.21896 8.35028 8.11004 8.3285 8.00003 8.3285C7.89002 8.3285 7.7811 8.35028 7.67955 8.39259C7.578 8.4349 7.48583 8.49689 7.40836 8.575L2.40836 13.575C2.33026 13.6525 2.26826 13.7446 2.22595 13.8462C2.18365 13.9477 2.16187 14.0567 2.16187 14.1667C2.16187 14.2767 2.18365 14.3856 2.22595 14.4871C2.26826 14.5887 2.33026 14.6809 2.40836 14.7583C2.48583 14.8364 2.578 14.8984 2.67955 14.9407C2.7811 14.9831 2.89002 15.0048 3.00003 15.0048C3.11004 15.0048 3.21896 14.9831 3.32051 14.9407C3.42206 14.8984 3.51423 14.8364 3.5917 14.7583L8.00003 10.3417L10.7417 13.0917C10.8192 13.1698 10.9113 13.2318 11.0129 13.2741C11.1144 13.3164 11.2234 13.3382 11.3334 13.3382C11.4434 13.3382 11.5523 13.3164 11.6538 13.2741C11.7554 13.2318 11.8476 13.1698 11.925 13.0917L17.1667 7.84167V10C17.1667 10.221 17.2545 10.433 17.4108 10.5893C17.5671 10.7455 17.779 10.8333 18 10.8333C18.221 10.8333 18.433 10.7455 18.5893 10.5893C18.7456 10.433 18.8334 10.221 18.8334 10V5.83333C18.832 5.72444 18.8094 5.61685 18.7667 5.51667Z" fill="#35DB95"/>
+                                        </svg>
+
+
+                                        <p style={{ margin: '0 0 0 10px', fontSize: '14px', fontFamily: 'lexend', fontWeight: '700', color: '#3B3B45' }}>10.3%</p>
+                                    </div>
+
                                 </div>
 
                                 
                             </div>
 
-                            <div className="trending-posts">
-                                <div className="trending-content">
-                                    <h3>How Influencer Marketing Affects Consumer Buying Behavior</h3>
-                                    <p>As influencer marketing continues to grow, consumers have been turning to their…</p>
-                                </div>
-
-                                <div style={{ width:'218px', display: 'flex' }}>
-                                    <div className="trending-rating" >
-                                        <svg
-                                        width="16"
-                                        height="17"
-                                        viewBox="0 0 24 24"
-                                        fill="red" // You can change the color here
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                                        </svg>
-                                        <p>260</p>
-                                    </div>
-
-                                    <div className="trending-rating">
-                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_1_258)">
-                                        <path d="M15 4.59207V11.344C15 12.4974 14.0749 13.4361 12.9378 13.4361H6.39514L2.0549 16.5V13.4361C0.921112 13.4322 0 12.4951 0 11.344V4.59207C0 3.43853 0.92514 2.5 2.06223 2.5H12.9378C14.0749 2.5 15 3.43853 15 4.59207Z" fill="#FFB800"/>
-                                        <path d="M16 4.6043V11.3957C16 12.5559 15.0135 13.5 13.801 13.5H8V2.5H13.801C15.0135 2.5 16 3.44402 16 4.6043Z" fill="#FF8600"/>
-                                        <path d="M5 5.5H12V6.5H5V5.5Z" fill="white"/>
-                                        <path d="M5 7.5H12V8.5H5V7.5Z" fill="white"/>
-                                        <path d="M5 9.5H12V10.5H5V9.5Z" fill="white"/>
-                                        <path d="M8 5.5H11V6.5H8V5.5Z" fill="#E1E1E3"/>
-                                        <path d="M8 7.5H11V8.5H8V7.5Z" fill="#E1E1E3"/>
-                                        <path d="M8 8.5H11V9.5H8V8.5Z" fill="#E1E1E3"/>
-                                        </g>
-                                        <defs>
-                                        <clipPath id="clip0_1_258">
-                                        <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
-                                        </clipPath>
-                                        </defs>
-                                        </svg>
-
-                                        <p style={{ margin: '0', fontSize: '14px' }}>260</p>
-                                    </div>
-
-                                    <div className="trending-rating">
-                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_1_270)">
-                                        <path d="M16 6.49746L8.75 0.5V4.16468C6.57562 4.27346 4.59781 5.13524 3.07469 6.49746C1.18844 8.18414 0 10.6376 0 13.3751V16.5H0.9375C0.9375 12.2774 4.37219 8.84181 8.59375 8.84181H8.75V12.4949L16 6.49746Z" fill="#FF641A"/>
-                                        <path d="M8.75 12.4959V8.84375H8.59375C4.37219 8.84375 0.9375 12.2784 0.9375 16.5H0V13.3759C0 10.6391 1.18844 8.18625 3.07469 6.5H16L8.75 12.4959Z" fill="#F03800"/>
-                                        </g>
-                                        <defs>
-                                        <clipPath id="clip0_1_270">
-                                        <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
-                                        </clipPath>
-                                        </defs>
-                                        </svg>
-
-                                        <p  style={{ margin: '0', fontSize: '14px' }}>123</p>
-                                    </div>
-                                </div>
-
-                                
-                            </div>
                         </div>
 
                         
