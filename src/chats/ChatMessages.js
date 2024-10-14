@@ -1,29 +1,10 @@
 import React from "react";
-import { FaSearch, FaStar, FaPlus, FaBell, FaMicrophone, FaPaperclip, FaCamera, FaSmile } from "react-icons/fa"; // Using FontAwesome for icons
+import { FaSearch, FaStar, FaBell, FaMicrophone, FaPaperclip, FaCamera, FaSmile } from "react-icons/fa"; // Using FontAwesome for icons
 
 
 const ChatMessages = ({ user, chatHistory }) => {
   return (
     <div className="chat-container">
-      {/* <div className="find">
-        <div className="search-bar">
-          <FaSearch className="search-icon" />
-          <input
-            type="text"
-            placeholder="Search..."
-            className="search-input"
-          />
-        </div>
-
-        <button className="add-btn">
-          <FaPlus className="add-icon" /> Add
-        </button>
-
-        <div className="notification-container">
-          <FaBell className="notification-icon" />
-          <span className="notification-badge"></span>
-        </div>
-      </div> */}
 
       <div className="chat-header">
         <div className="chat-user-info">
@@ -38,7 +19,6 @@ const ChatMessages = ({ user, chatHistory }) => {
           </div>
         </div>
 
-        {/* Icons on the right-hand side */}
         <div className="header-icons">
           <FaSearch className="icon" />
           <FaStar className="icon" />
@@ -62,17 +42,14 @@ const ChatMessages = ({ user, chatHistory }) => {
       </div>
 
       <div className="chatbox-input-container">
-        {/* Mic icon on the left */}
         <FaMicrophone className="mic-icon" />
 
-        {/* Input field */}
         <input
           type="text"
           placeholder="Type a message..."
           className="chatbox-input"
         />
 
-        {/* Icons on the right */}
         <div className="right-icons">
           <FaPaperclip className="icon" />
           <FaCamera className="icon" />
@@ -80,7 +57,6 @@ const ChatMessages = ({ user, chatHistory }) => {
         </div>
       </div>
 
-      {/* Button outside the chatbox input */}
       <button className="send-btn">Send</button>
     </div>
   );
