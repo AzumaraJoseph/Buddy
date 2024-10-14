@@ -13,6 +13,10 @@ const LoginComponent = () => {
         password: "",
     });
 
+    const handleNavigateToRegister = () => {
+        navigate('/register'); // Navigate to the Register page
+      };
+
     const navigate = useNavigate(); // Initialize useNavigate
 
   
@@ -198,7 +202,7 @@ const LoginComponent = () => {
                     <p>By clicking the button above, you agree to our <span>Terms of Service</span> and <span>Privacy Policy</span>.</p>
 
                 </div>
-                <p>Already have an account? <span>Register</span></p>
+                <p>Already have an account? <span onClick={handleNavigateToRegister}>Register</span></p>
 
             </div>
 
