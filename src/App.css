@@ -78,21 +78,7 @@
   font-family: lexend;
   margin-left: 8px;
   font-weight: 500;
-  /* position: absolute;
-  top: 16px;
-  left: 58px; */
 }
-
-/* span {
-  line-height: 137.1%;
-  letter-spacing: 2px;
-  font-size: 14px;
-  font-family: lexend;
-  margin-left: 8px;
-  font-weight: 500;
-  /* position: absolute;
-  top: 16px;
-} */
 
 .sidebar-item:hover {
   background-color: #FF8600;
