@@ -1,5 +1,4 @@
 import React from "react";
-import SignupComponent from "./SignUpComponent";
 import DescriptionComponent from "./DescriptionComponent";
 import RegisterComponent from "./RegisterComponent";
 

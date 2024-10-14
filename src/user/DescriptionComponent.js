@@ -9,7 +9,6 @@ const DescriptionComponent = () => {
         <div className="description-content">
             <div>
                 <div className="description">
-                    {/* <h2>Why Join Us?</h2> */}
                     <span className="unread-badge">
                         <svg
                             width="16"
@@ -30,7 +29,6 @@ const DescriptionComponent = () => {
 
                 </div>
                 <div className="description">
-                    {/* <h2>Why Join Us?</h2> */}
                     <span className="unread-badge">
                         <svg
                             width="16"
@@ -51,7 +49,6 @@ const DescriptionComponent = () => {
 
                 </div>
                 <div className="description">
-                    {/* <h2>Why Join Us?</h2> */}
                     <span className="unread-badge">
                         <svg
                             width="16"

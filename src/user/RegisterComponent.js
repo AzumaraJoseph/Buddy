@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 
 const RegisterComponent = () => {
 
-    const navigate = useNavigate(); // Initialize useNavigate
-    // const [otp, setOtp] = useState("");
+    const navigate = useNavigate(); 
     const handleNavigateToLogin = () => {
-        navigate('/login'); // Navigate to the Register page
-      };
-
+        navigate('/login');
+    };
 
     const [formData, setFormData] = useState({
         first_name: "",
@@ -18,6 +16,8 @@ const RegisterComponent = () => {
         email: "",
         password: "",
     });
+
+    const isFormValid = Object.values(formData).every(value => value !== '');
     
     const handleChange = (e) => {
         setFormData({
@@ -32,39 +32,35 @@ const RegisterComponent = () => {
         const response = await fetch("https://fe-test.revvex.io/api/admin/register", {
             method: "POST",
             headers: {
-            "Content-Type": "application/json", // Indicate that you're sending JSON data
+            "Content-Type": "application/json", 
             },
-            body: JSON.stringify(formData), // Convert formData to JSON string
+            body: JSON.stringify(formData), 
         });
     
-        // Check if the response is OK (status code 200-299)
         if (!response.ok) {
-            const errorData = await response.json(); // Parse the error response
+            const errorData = await response.json(); 
             throw new Error(`HTTP error! status: ${response.status}, message: ${errorData.message}`);
         }
     
-        const data = await response.json(); // Parse the JSON response
+        const data = await response.json(); 
     
         // Store token in local storage
-        const token = data.data.token; // Access token from response data
+        const token = data.data.token;
         localStorage.setItem("token", token);
     
         // Log OTP
-        const otp = data.data.opt; // Ensure correct property name
+        const otp = data.data.opt; 
         // setOtp(otp);
         console.log("OTP:", otp);
 
-        // Redirect to MailPage component upon successful registration
-        navigate("/mail"); // Navigate to MailPage
+        
+        navigate("/mail"); 
     
         } catch (error) {
-        console.error("Registration error:", error.message); // Log the error message
+        console.error("Registration error:", error.message); 
         }
     };
     
-
-
-
   return (
     <div className="signup-container">
         <div className="signUp-content register-container">
@@ -90,6 +86,7 @@ const RegisterComponent = () => {
                                     placeholder="First Name"
                                     value={formData.first_name}
                                     onChange={handleChange}
+                                    required
                                     />
                                 </div>
                                 <div className="form-group">
@@ -103,6 +100,7 @@ const RegisterComponent = () => {
                                     placeholder="Last Name"
                                     value={formData.last_name}
                                     onChange={handleChange}
+                                    required
                                     />
                                 </div>
                             </div>
@@ -119,6 +117,7 @@ const RegisterComponent = () => {
                                 placeholder="Work email"
                                 value={formData.email}
                                 onChange={handleChange}
+                                required
                             />
                             </div>
 
@@ -133,14 +132,13 @@ const RegisterComponent = () => {
                                 placeholder="Password"
                                 value={formData.password}
                                 onChange={handleChange}
+                                required
                             />
                             </div>
 
-                            <button type="submit">Create account</button>
+                            <button type="submit" className={`register-button ${!isFormValid ? 'disabled' : ''}`}>Create account</button>
                         </form>
                     </div>
-
-
 
                     <p>By clicking the button above, you agree to our <span>Terms of Service</span> and <span>Privacy Policy</span>.</p>
 
