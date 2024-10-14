@@ -112,8 +112,8 @@ const DashBoardPage
 
 
         {/* Sidebar remains persistent */}
-        <Sidebar user={user}/>
-        
+        {/* <Sidebar user={user}/> */}
+
         {/* Route components will render here */}
         <Routes>
             {/* <Route path="/main" element={<MainComponent />} />

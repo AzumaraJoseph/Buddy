@@ -150,7 +150,7 @@ const AppRoutes = () => {
 
       {/* Layout Route */}
       <Route path="/" element={<Layout />}>
-          <Route index element={<MainComponent />} /> Default view
+          {/* <Route index element={<MainComponent />} /> Default view */}
           <Route path="main" element={<MainComponent />} /> {/* Add this */}
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="chatwindow" element={<ChatWindow />} />
