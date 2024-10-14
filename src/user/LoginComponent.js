@@ -1,30 +1,111 @@
 import React, { useState } from "react";
 import { FaEnvelope, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+
+
 
 const LoginComponent = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
+    const [formData, setFormData] = useState({
+        email: "",
+        password: "",
+    });
+
+    const navigate = useNavigate(); // Initialize useNavigate
+
   
     const handleEmailChange = (e) => {
-      setEmail(e.target.value.slice(0, 60)); // Limit to 15 characters
+    //   setEmail(e.target.value.slice(0, 60)); // Limit to 15 characters
+
+        const newEmail = e.target.value.slice(0, 60);
+        setEmail(newEmail);
+        setFormData((prevFormData) => ({
+            ...prevFormData,
+            email: newEmail,
+        }));
     };
   
     const handlePasswordChange = (e) => {
-      setPassword(e.target.value.slice(0, 15)); // Limit to 15 characters
+    //   setPassword(e.target.value.slice(0, 15)); // Limit to 15 characters
+
+        const newPassword = e.target.value.slice(0, 15);
+        setPassword(newPassword);
+        setFormData((prevFormData) => ({
+            ...prevFormData,
+            password: newPassword,
+        }));
     };
   
-    
+
     const togglePasswordVisibility = () => {
       setShowPassword(!showPassword);
     };
   
-    const handleEmailSignup = (e) => {
-      e.preventDefault();
-      // Handle form submission logic here
-    };
+    // const handleLogin = async (e) => {
+    //     e.preventDefault();
+    //     try {
+    //     const response = await fetch("https://fe-test.revvex.io/api/admin/login", {
+    //         method: "POST",
+    //         headers: {
+    //         "Content-Type": "application/json", // Indicate that you're sending JSON data
+    //         },
+    //         body: JSON.stringify(formData), // Convert formData to JSON string
+    //     });
+    
+    //     // Check if the response is OK (status code 200-299)
+    //     if (!response.ok) {
+    //         const errorData = await response.json(); // Parse the error response
+    //         throw new Error(`HTTP error! status: ${response.status}, message: ${errorData.message}`);
+    //     }
+    //         console.log("Login successful");
 
-  return (
+    
+    //     // const data = await response.json(); // Parse the JSON response
+    
+    //     // Store token in local storage
+    //     // const token = data.data.token; // Access token from response data
+    //     // localStorage.setItem("token", token);
+    
+    //     // Log OTP
+    //     // const otp = data.data.opt; // Ensure correct property name
+    //     // setOtp(otp);
+    //     // console.log("OTP:", otp);
+
+    //     // Redirect to MailPage component upon successful registration
+    //     navigate("/dashboard"); // Navigate to MailPage
+    
+    //     } catch (error) {
+    //     console.error("Registration error:", error.message); // Log the error message
+    //     }
+    // };
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await fetch("https://fe-test.revvex.io/api/admin/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+    
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(`HTTP error! status: ${response.status}, message: ${errorData.message}`);
+            }
+    
+            console.log("Login successful");
+            navigate("/dashboard");
+    
+        } catch (error) {
+            console.error("Registration error:", error.message);
+        }
+    };
+    
+    return (
     <div className="signup-container">
         <div className="signUp-content register-container">
             <div className="signUp-content-item">
@@ -64,7 +145,7 @@ const LoginComponent = () => {
 
                             <button type="submit">Login</button>
                         </form> */}
-                        <form onSubmit={handleEmailSignup}>
+                        <form onSubmit={handleLogin}>
                             <div className="form-group form-group-login">
                                 <label htmlFor="email">Email</label>
                                 <span className="icon">
@@ -75,7 +156,8 @@ const LoginComponent = () => {
                                     id="email"
                                     name="email"
                                     placeholder="Seyi@zojatech.com"
-                                    value={email}
+                                    // value={email}
+                                    value={formData.email}
                                     onChange={handleEmailChange}
                                     maxLength="60"
                                 />
@@ -96,7 +178,8 @@ const LoginComponent = () => {
                                     id="password"
                                     name="password"
                                     placeholder="***********"
-                                    value={password}
+                                    // value={password}
+                                    value={formData.password}
                                     onChange={handlePasswordChange}
                                     maxLength="15"
                                 />
