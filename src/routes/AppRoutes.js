@@ -59,11 +59,20 @@ import ChatWindow from '../chats/ChatWindow';
 // import PrivateRoute from '../routes/PrivateRoutes';
 import PublicRoute from '../routes/PublicRoutes';
 import MainComponent from '../dashboard/MainComponent';
+import Layout from '../routes/Layout';
 
 const AppRoutes = () => {
   return (
     <Routes>
-        <Route
+
+        {/* Routes without Sidebar (or different layouts) */}
+        <Route path="signup" element={<Signup />} />
+        <Route path="register" element={<Register />} />
+        <Route path="mail" element={<Mail />} />
+        <Route path="verify-mail" element={<VerifyMail />} />
+        <Route path="otp" element={<OTP />} />
+        <Route path="login" element={<Login />} />
+        {/* <Route
         path="/"
         element={
           <PublicRoute>
@@ -119,21 +128,36 @@ const AppRoutes = () => {
             <Login />
           </PublicRoute>
         }
-      />
-      <Route
+      /> */}
+
+
+
+
+      {/* <Route
         path="/dashboard"
         element={<Dashboard />}
-      />
-      
-      <Route
+      /> */}
+
+      {/* <Route
         path="/main"
         element={<MainComponent />}
-      />
+      /> */}
 
-      <Route
+      {/* <Route
         path="/chatwindow"
         element={<ChatWindow />}
-      />
+      /> */}
+
+      {/* Layout Route */}
+      <Route path="/" element={<Layout />}>
+          <Route index element={<MainComponent />} /> Default view
+          <Route path="main" element={<MainComponent />} /> {/* Add this */}
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="chatwindow" element={<ChatWindow />} />
+          {/* Add any other routes you want under the Layout */}
+        </Route>
+
+
     </Routes>
   );
 };

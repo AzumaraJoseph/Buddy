@@ -139,7 +139,7 @@ const ChatApp = () => {
   return (
     <div className="chat-app-container">
 
-        <Sidebar user={user}/>
+        {/* <Sidebar user={user}/> */}
         <div className="main">
             <div className="top">
                 <h4>Messages</h4>

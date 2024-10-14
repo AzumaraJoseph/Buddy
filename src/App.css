@@ -12,6 +12,17 @@
   background-color: #F5F5F5;
 }
 
+.layout {
+  display: flex;
+}
+
+.layout-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  height: 100vh;
+  overflow-y: auto;
+}
 
 
 /* Sidebar Styles */
