@@ -1,6 +1,5 @@
-// Layout.js
 import { Outlet } from 'react-router-dom';
-import Sidebar from '../SideBar'; // Make sure to adjust the path if needed
+import Sidebar from '../SideBar'; 
 
 const Layout = () => {
   return (
