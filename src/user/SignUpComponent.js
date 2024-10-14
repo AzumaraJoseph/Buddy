@@ -1,5 +1,4 @@
 import React from "react";
-import { FaGoogle } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 
 
@@ -8,13 +7,11 @@ const SignupComponent = () => {
   const navigate = useNavigate();
 
   const handleNavigateToRegister = () => {
-    navigate('/register'); // Navigate to the Register page
+    navigate('/register'); 
   };
 
-//   const navigate = useNavigate();
-
   const handleNavigateToLogin = () => {
-      navigate('/login'); // Navigate to the Register page
+      navigate('/login'); 
     };
 
   return (
@@ -49,8 +46,7 @@ const SignupComponent = () => {
                             Sign Up with Google
                             </button>
 
-                        </div>
-                        
+                        </div>     
                     </div>
 
                     <p>By clicking the button above, you agree to our <span>Terms of Service</span> and <span>Privacy Policy</span>.</p>

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaGoogle } from "react-icons/fa";
 import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom'; 
 

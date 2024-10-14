@@ -1,14 +1,12 @@
-import React, { useState } from "react";
-import { FaGoogle } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom';
 
+import { useNavigate } from 'react-router-dom';
 
 const MailPageComponent = () => {
 
     const navigate = useNavigate();
 
     const handleNavigateToOTP = () => {
-        navigate('/otp'); // Navigate to the Register page
+        navigate('/otp'); 
       };
 
   return (
