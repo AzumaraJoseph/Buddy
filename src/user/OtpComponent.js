@@ -63,7 +63,7 @@ const OtpComponent = () => {
             if (response.ok && data.success) {
                 console.log('OTP verified successfully:', data.message);
                 
-                navigate("/login"); 
+                navigate("/verify-mail"); 
             } else {
                 console.error('OTP verification failed:', data.message);
             }

@@ -1,6 +1,14 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom'; 
+
 
 const MailVerifyComponent = () => {  
+  const navigate = useNavigate(); 
+
+  const handleNavigateToLogin = () => {
+    navigate('/login'); 
+  };
+
 
   return (
     <div className="signup-container">
@@ -15,7 +23,7 @@ const MailVerifyComponent = () => {
                 <p>The verified email address will be associated with your account. Click on the button below to continue</p>
             </div>
 
-            <button className="mail-button verify-button">Continue</button>
+            <button onClick={handleNavigateToLogin} className="mail-button verify-button">Continue</button>
         </div>
 
     </div>
