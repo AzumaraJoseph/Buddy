@@ -48,6 +48,7 @@ const SignupComponent = () => {
 
                         </div>     
                     </div>
+                    
 
                     <p>By clicking the button above, you agree to our <span>Terms of Service</span> and <span>Privacy Policy</span>.</p>
 
