@@ -9,7 +9,6 @@ const MailVerifyComponent = () => {
     navigate('/login'); 
   };
 
-
   return (
     <div className="signup-container">
         <div className="signUp-content verify-content">
